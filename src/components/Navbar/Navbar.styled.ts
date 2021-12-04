@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    position: absolute;
     width: 100%;
     height: 150px;
     border: 1px solid black;
@@ -33,8 +34,9 @@ export const RouterButtonContainer = styled.div`
     justify-content: space-evenly;
 `;
 
-export const RouterButton = styled.div`
-    width: 50px;
-    height: 30px;
-    color: white;
+export const RouterButton = styled.div<{btnColor: string}>`
+    /* width: 50px;
+    height: 30px; */
+    color: ${({btnColor}) => btnColor};
+    font-size: 36px;
 `;
