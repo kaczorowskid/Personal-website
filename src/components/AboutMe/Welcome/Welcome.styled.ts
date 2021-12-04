@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-
 `;
 
 export const Container = styled.div`
