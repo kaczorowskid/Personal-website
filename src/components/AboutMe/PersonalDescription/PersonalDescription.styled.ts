@@ -8,7 +8,6 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
-    font-family: 'Roboto', sans-serif;
 `;
 
 export const CardContainer = styled(motion.div)`
