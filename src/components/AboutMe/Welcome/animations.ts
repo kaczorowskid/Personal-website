@@ -20,5 +20,5 @@ export const imageVariant = {
     animate: {
         scale: 1,
     },
-    transition: {duration: 1}
+    transition: { duration: 1 }
 }
