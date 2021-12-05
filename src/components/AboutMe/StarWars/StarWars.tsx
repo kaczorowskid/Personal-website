@@ -11,7 +11,15 @@ const StarWars: React.FC = () => {
             <styled.Container>
                 <styled.CardsContainer>
                     {data && data.map((item: any, i: number) => (
-                        <styled.StarWarsCardContainer key={i} >
+                        <styled.StarWarsCardContainer
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ...(i % 2 == 1) && { delay: 0.5 },
+                            duration: 1
+                        }} 
+                        key={i} >
                             <styled.StarWarsHeaderConatiner>
                                 <styled.StarWarsHeader>Star</styled.StarWarsHeader>
                                 <styled.StarWarsHeader>Wars</styled.StarWarsHeader>

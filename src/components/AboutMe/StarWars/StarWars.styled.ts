@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import stars from '../../../assets/img/stars.svg';
 
@@ -31,7 +32,7 @@ export const CardsContainer = styled.div`
     }
 `;
 
-export const StarWarsCardContainer = styled.div`
+export const StarWarsCardContainer = styled(motion.div)`
     margin: 10px;
     width: 380px;
     height: 410px;
@@ -39,12 +40,18 @@ export const StarWarsCardContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 4px solid white;
+    cursor: pointer;
+    border-radius: 10px;
+
+    &:hover {
+        border: 4px solid yellow;
+    }
 `;
 
 export const StarWarsHeaderConatiner = styled.div`
     width: 100%;
     height: 60%;
-    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,21 +62,21 @@ export const StarWarsHeaderConatiner = styled.div`
 `;
 
 export const StarWarsHeader = styled.span`
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P';
     color: #f6e41a;
 `;
 
 export const TitleContainer = styled.div`
-    width: 100%;
+    width: 90%;
     height: 40%;
-    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
     justify-content: center;
 `;
 
 export const MovieTitle = styled.div`
     color: white;
-    font-size: 20px;
+    font-size: 15px;
+    font-family: 'Press Start 2P';
 `;

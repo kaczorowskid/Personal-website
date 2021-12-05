@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
     position: fixed;
     width: 100%;
-    height: 150px;
-    border: 1px solid black;
+    height: 100px;
+    /* border: 1px solid black; */
     font-family: 'Roboto', sans-serif;
-    background: white;
+    background: #1B1B1B;
     z-index: 2;
 `;
 
@@ -20,19 +20,21 @@ export const ImgContainer = styled.div`
 
 export const LogoContainer = styled.div`
     width: 20%;
-    height: 150px;
+    height: 100px;
     position: absolute;
     left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
+    color: yellow;
 `;
 
 export const RouterButtonContainer = styled.div`
     position: absolute;
     right: 0;
     width: 20%;
-    height: 150px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
