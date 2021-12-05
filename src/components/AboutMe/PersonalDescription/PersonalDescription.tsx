@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as styled from './PersonalDescription.styled';
 import blob1 from '../../../assets/img/blob1.svg';
 import face from '../../../assets/img/face.svg';
+import blob2 from '../../../assets/img/Vector.svg';
 import { motion } from 'framer-motion';
 
+
 const PersonalDescription: React.FC = () => {
+
+    const [styleBlob, setStyleBlob] = useState<boolean>(false) 
+
     return (
         <>
             <styled.Container>
@@ -15,6 +20,7 @@ const PersonalDescription: React.FC = () => {
                     transition={{
                         duration: 1
                     }}
+                    onAnimationStart = {() => setStyleBlob(true)}
                 >
                     <styled.ImageContainer>
                         <img style={{ width: '100%' }} src={face} alt="" />
@@ -33,9 +39,14 @@ const PersonalDescription: React.FC = () => {
                         </styled.DescriptionContainer>
                     </styled.TextContainer>
                 </styled.CardContainer>
-                <styled.BlobContainer>
-                    <img src={blob1} alt="" />
-                </styled.BlobContainer>
+                {styleBlob && <styled.BlobContainer>
+                    <motion.img 
+                    initial = {{opacity: 0}}
+                    animate = {{opacity: 1}}
+                    transition = {{ delay: 0.5, duration: 1}}
+                    src={blob1} 
+                    alt="" />
+                </styled.BlobContainer>}
             </styled.Container>
         </>
     )

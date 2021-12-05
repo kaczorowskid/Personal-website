@@ -35,9 +35,9 @@ export const CardContainer = styled(motion.div)`
 `;
 
 export const BlobContainer = styled(motion.div)`
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
     z-index: -1;
 `;
 

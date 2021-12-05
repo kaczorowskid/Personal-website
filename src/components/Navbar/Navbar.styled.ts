@@ -6,12 +6,16 @@ export const Container = styled.div`
     height: 150px;
     border: 1px solid black;
     font-family: 'Roboto', sans-serif;
+    background: white;
+    z-index: 2;
 `;
 
 export const ImgContainer = styled.div`
     position: absolute;
     right: 0;
     overflow: hidden;
+    width: 25vw;
+    z-index: -1;
 `;
 
 export const LogoContainer = styled.div`

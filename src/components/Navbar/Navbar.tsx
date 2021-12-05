@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
         <>
             <styled.Container>
                 <styled.ImgContainer>
-                    <img style = {{position: 'relative'}} src={blobsSvg} alt="plask kropeczka" />
+                    <img style = {{width: '100%'}} src={blobsSvg} alt="plask kropeczka" />
                 </styled.ImgContainer>
                 <styled.LogoContainer>Kozak stronka mordo</styled.LogoContainer>
                 <styled.RouterButtonContainer>
