@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { config } from "../config";
 import { callApi } from "../helper/callApi";
 
@@ -9,26 +9,33 @@ export const getAllMovies = createAsyncThunk("movies/getAll", async () => {
     return response
 });
 
-export const getOneMovie = createAsyncThunk('movie/getOneMovie', async ( movieId: number) => {
+export const getOneMovie = createAsyncThunk('movie/getOneMovie', async (movieId: number) => {
     const { response } = await callApi(`${moviesApiPath}/${movieId}`)
     return response
 })
 
+interface Istate {
+    dataAll: any,
+    dataOne: any
+}
+
+const initialState: Istate = {
+    dataAll: {},
+    dataOne: {}
+}
+
 const postsReducer = createSlice({
     name: 'movies',
-    initialState: {
-        dataAll: {},
-        dataOne: {}
-    },
+    initialState: initialState,
     reducers: {},
     extraReducers: (builder: any) => {
-        builder.addCase(getAllMovies.fulfilled, (state: any, {payload}: any) => {
+        builder.addCase(getAllMovies.fulfilled, (state: Istate, { payload }: PayloadAction<any>) => {
             state.dataAll = payload
         });
         builder.addCase(getAllMovies.rejected, () => {
             console.error("Any error to get all data");
         });
-        builder.addCase(getOneMovie.fulfilled, (state: any, {payload}: any) => {
+        builder.addCase(getOneMovie.fulfilled, (state: Istate, { payload }: PayloadAction<any>) => {
             state.dataOne = payload
         });
         builder.addCase(getOneMovie.rejected, () => {
