@@ -18,7 +18,7 @@ const Welcome: React.FC = () => {
                     </styled.ImageContainer>
                     <styled.ContentContainer>
                         <styled.MyWelcomeContainer>
-                            {"Hi I'm Damian".split('').map((item, i, array) => {
+                            {[..."Hi I'm Damian"].map((item, i, array) => {
                                 return (
                                     <styled.MyWelcome
                                         key={i}
@@ -36,7 +36,7 @@ const Welcome: React.FC = () => {
                             })}
                         </styled.MyWelcomeContainer>
                         <styled.DescriptionContainer>
-                            {helloIsEnd && "Aspirating frontend developer".split('').map((item, i, array) => {
+                            {helloIsEnd && [..."Aspirating frontend developer"].map((item, i, array) => {
                                 return (
                                     <styled.Description
                                         key={i}
