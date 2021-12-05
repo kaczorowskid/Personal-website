@@ -9,8 +9,8 @@ const PersonalDescription: React.FC = () => {
         <>
             <styled.Container>
                 <styled.CardContainer
-                    initial={{ rotate: 0 }}
-                    whileInView={{ rotate: 360 }}
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
                     transition={{
                         duration: 1
