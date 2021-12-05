@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { ActionReducerMapBuilder, createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { config } from "../config";
 import { callApi } from "../helper/callApi";
 
@@ -28,7 +28,7 @@ const postsReducer = createSlice({
     name: 'movies',
     initialState: initialState,
     reducers: {},
-    extraReducers: (builder: any) => {
+    extraReducers: (builder: ActionReducerMapBuilder<Istate>) => {
         builder.addCase(getAllMovies.fulfilled, (state: Istate, { payload }: PayloadAction<any>) => {
             state.dataAll = payload
         });
