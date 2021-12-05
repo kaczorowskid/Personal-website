@@ -1,18 +1,23 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import GlobalStyle from './GlobalStyle';
 import AboutMe from './views/AboutMe/AboutMe';
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import StarWarsMovieInfo from './views/StarWarsMovieInfo/StarWarsMovieInfo';
 
+import { config } from './config';
+
 const App = () => {
+
+  const { aboutMe, starWars } = config.routerPath;
+
   return (
     <>
       <GlobalStyle />
       <Router>
         <Routes>
-          <Route path="/about" element={<AboutMe />} />
-          <Route path = '/starwars' element = {<StarWarsMovieInfo />} />
+          <Route path = {aboutMe} element = {<AboutMe />} />
+          <Route path = {starWars} element = {<StarWarsMovieInfo />} />
         </Routes>
       </Router>
     </>
