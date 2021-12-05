@@ -7,7 +7,7 @@ export const textVariants = {
         y: 0,
         scale: 1,
         transition: {
-            delay:  i * 0.1,
+            delay:  i * 0.05,
             type: 'spring'
         },
     })

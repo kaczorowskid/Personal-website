@@ -5,6 +5,7 @@ import AboutMe from './views/AboutMe/AboutMe';
 
 import { useDispatch } from 'react-redux'
 import { getAllMovies } from './reducers/movies';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
 
@@ -19,6 +20,7 @@ const App = () => {
       <GlobalStyle />
       <Navbar />
       <AboutMe />
+      <Footer />
     </>
   );
 }

@@ -39,14 +39,14 @@ const PersonalDescription: React.FC = () => {
                         </styled.DescriptionContainer>
                     </styled.TextContainer>
                 </styled.CardContainer>
-                {styleBlob && <styled.BlobContainer>
+                {/* {styleBlob && <styled.BlobContainer>
                     <motion.img 
                     initial = {{opacity: 0}}
                     animate = {{opacity: 1}}
                     transition = {{ delay: 0.5, duration: 1}}
                     src={blob1} 
                     alt="" />
-                </styled.BlobContainer>}
+                </styled.BlobContainer>} */}
             </styled.Container>
         </>
     )
