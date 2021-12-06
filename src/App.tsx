@@ -9,7 +9,7 @@ import { config } from './config';
 
 const App = () => {
 
-  const { aboutMe, starWars } = config.routerPath;
+  const { aboutMe, movie } = config.routerPath;
 
   return (
     <>
@@ -17,7 +17,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path = {aboutMe} element = {<AboutMe />} />
-          <Route path = {starWars} element = {<StarWarsMovieInfo />} />
+          <Route path = {movie} element = {<StarWarsMovieInfo />} />
         </Routes>
       </Router>
     </>

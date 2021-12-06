@@ -1,7 +1,7 @@
 export const config = {
     routerPath: {
         aboutMe: '/aboutme',
-        starWars: '/starwars'
+        movie: '/movie/:id'
     },
     requestsPath: {
         moviesApiPath: 'https://swapi.dev/api/films'
