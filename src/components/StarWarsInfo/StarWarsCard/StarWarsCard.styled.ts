@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Cross } from '@styled-icons/entypo';
 
 export const Container = styled.div<{ data?: any }>`
     position: absolute;
@@ -56,4 +57,13 @@ export const TextContainer1 = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+`;
+
+export const ExitIcon = styled(Cross)`
+    color: red;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 0;
+    cursor: pointer;
 `;

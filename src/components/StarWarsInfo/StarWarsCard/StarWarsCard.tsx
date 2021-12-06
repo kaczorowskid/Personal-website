@@ -1,25 +1,30 @@
 import React, { Fragment, useEffect } from 'react';
 import * as styled from './StarWarsCard.styled';
 import ReactLoading from "react-loading";
+import { config } from '../../../config';
 import { useParams } from 'react-router-dom';
 import { useMovieData } from '../../../hooks/useMovieData';
 import { useDispatch } from 'react-redux';
 import { getOneMovie } from '../../../reducers/movies';
+import { useNavigate } from 'react-router';
 
 const StarWarsCard: React.FC = () => {
 
     const { id } = useParams();
     const { data } = useMovieData();
     const dispatch = useDispatch();
+    const navigate = useNavigate()
+
+    const { aboutMe } = config.routerPath;
 
     useEffect(() => {
         dispatch(getOneMovie(Number(id)))
     }, [])
 
-
     return (
         <styled.Container data={data}>
-            {data ? <Fragment>
+            <styled.ExitIcon onClick = {() => navigate(aboutMe)} />
+            {!!data ? <Fragment>
                 <styled.TextContainer>
                     <styled.LineTitle>Title</styled.LineTitle>
                     <styled.Text>{data.title}</styled.Text>
