@@ -29,7 +29,6 @@ const StarWars: React.FC = () => {
                         </styled.StarWarsHeaderConatiner>
                         <styled.TitleContainer>
                             <styled.MovieTitle>{item.title}</styled.MovieTitle>
-                            <styled.MovieTitle>{urlParser(item.url)}</styled.MovieTitle>
                         </styled.TitleContainer>
                     </styled.StarWarsCardContainer>
                 ))}

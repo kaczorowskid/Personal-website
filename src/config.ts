@@ -1,5 +1,6 @@
 export const config = {
     routerPath: {
+        home: '/',
         aboutMe: '/aboutme',
         movie: '/movie/:id'
     },

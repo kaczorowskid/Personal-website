@@ -27,6 +27,7 @@ export const LogoContainer = styled.div`
     align-items: center;
     font-size: 20px;
     color: yellow;
+    font-family: 'Press Start 2P';
 `;
 
 export const RouterButtonContainer = styled.div`
@@ -41,5 +42,12 @@ export const RouterButtonContainer = styled.div`
 
 export const RouterButton = styled.div<{btnColor: string}>`
     color: ${({btnColor}) => btnColor};
-    font-size: 36px;
+    font-size: 22px;
+    font-family: 'Press Start 2P';
+    cursor: pointer;
+    border-bottom: 4px solid transparent ;
+
+    &:hover {
+        border-bottom: 4px solid white ;
+    }
 `;

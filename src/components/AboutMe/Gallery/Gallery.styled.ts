@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import pieselwut from '../../../assets/img/pieselwut.png'
 
 export const Container = styled.div`
     width: 100%;
@@ -6,6 +7,13 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-image: url(${pieselwut}); */
 `;
 
 export const Wrapper = styled.div`
@@ -15,7 +23,6 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
 `;
 
 export const CardContainer = styled.div`
