@@ -4,13 +4,13 @@ import { callApi } from "../helper/callApi";
 
 const { moviesApiPath } = config.requestsPath
 
-export const getAllMovies = createAsyncThunk("movies/getAll", async () => {
+export const getAllMovies = createAsyncThunk("movies/getAllMovies", async () => {
     const { response, error } = await callApi(moviesApiPath)
     if(error) console.log(error)
     return response
 });
 
-export const getOneMovie = createAsyncThunk('movie/getOneMovie', async (movieId: number) => {
+export const getOneMovie = createAsyncThunk('movies/getOneMovie', async (movieId: number) => {
     const { response, error } = await callApi(`${moviesApiPath}/${movieId}`)
     if(error) console.log(error)
     return response
