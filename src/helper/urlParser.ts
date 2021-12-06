@@ -1,4 +1,4 @@
 export const urlParser = (urlPath: string) => {
-    const url = new URL(urlPath);
+    const url: URL = new URL(urlPath);
     return url.pathname.split('/')[3]
 }

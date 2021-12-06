@@ -4,7 +4,6 @@ export const Container = styled.div`
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    /* background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%); */
     background: black;
 `;
 

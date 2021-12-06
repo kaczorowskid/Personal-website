@@ -33,6 +33,7 @@ const postsReducer = createSlice({
     extraReducers: (builder: ActionReducerMapBuilder<Istate>) => {
         builder.addCase(getAllMovies.fulfilled, (state: Istate, { payload }: PayloadAction<any>) => {
             state.dataAll = payload
+            state.dataOne = {}
         });
         builder.addCase(getAllMovies.rejected, () => {
             console.error("Any error to get all data");

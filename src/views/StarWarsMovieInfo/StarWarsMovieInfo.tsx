@@ -4,11 +4,9 @@ import StarWarsCard from '../../components/StarWarsInfo/StarWarsCard/StarWarsCar
 
 const StarWarsMovieInfo: React.FC = () => {
     return (
-        <>
-            <Stars>
-                <StarWarsCard />
-            </Stars>
-        </>
+        <Stars>
+            <StarWarsCard />
+        </Stars>
     )
 }
 

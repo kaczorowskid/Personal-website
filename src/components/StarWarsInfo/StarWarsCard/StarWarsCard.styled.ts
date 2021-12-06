@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-
+export const Container = styled.div<{ data?: any }>`
     position: absolute;
     top: 50%;
     left: 50%;
@@ -13,8 +12,14 @@ export const Container = styled.div`
     -moz-box-shadow: 8px 10px 8px 0px rgba(255, 255, 255, 0.5);
     box-shadow: 8px 10px 8px 0px rgba(255, 255, 255, 0.5);
     display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    ${({ data }) => data ? ({
+        'flex-direction': 'column',
+        'align-items': 'center'
+    }) : ({
+        'align-items': 'cente',
+        'justify-content': 'center'
+    })}
 `;
 
 export const TextContainer = styled.div`

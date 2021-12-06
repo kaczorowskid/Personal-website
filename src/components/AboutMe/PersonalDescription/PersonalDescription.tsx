@@ -3,7 +3,6 @@ import * as styled from './PersonalDescription.styled';
 import face from '../../../assets/img/face.svg';
 
 const PersonalDescription: React.FC = () => {
-
     return (
         <styled.Container>
             <styled.CardContainer
