@@ -11,9 +11,9 @@ const Navbar: React.FC = () => {
 
     return (
         <styled.Container>
-            <styled.ImgContainer>
+            {/* <styled.ImgContainer>
                 <img style={{ width: '100%' }} src={blobsSvg} alt="plask kropeczka" />
-            </styled.ImgContainer>
+            </styled.ImgContainer> */}
             <styled.LogoContainer>OK site</styled.LogoContainer>
             <styled.RouterButtonContainer>
                 <styled.RouterButton btnColor='black' onClick = {() => navigate(home)} >Home</styled.RouterButton>
