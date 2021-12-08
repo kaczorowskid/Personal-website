@@ -1,5 +1,6 @@
 import React from 'react';
 import * as styled from './StarWars.styled';
+import ReactLoading from "react-loading";
 import { useAllMoviesData } from '../../../hooks/useAllMoviesData';
 import { urlParser } from '../../../helper/urlParser';
 import { useNavigate  } from "react-router-dom";
@@ -12,7 +13,7 @@ const StarWars: React.FC = () => {
     return (
         <styled.Container>
             <styled.CardsContainer>
-                {data && data.map((item: any, i: number) => (
+                {data ? data.map((item: any, i: number) => (
                     <styled.StarWarsCardContainer
                         onClick = {() => navigate(`/movie/${urlParser(item.url)}`)} 
                         initial={{ opacity: 0 }}
@@ -31,7 +32,7 @@ const StarWars: React.FC = () => {
                             <styled.MovieTitle>{item.title}</styled.MovieTitle>
                         </styled.TitleContainer>
                     </styled.StarWarsCardContainer>
-                ))}
+                )) : <ReactLoading type='spin' width={100} height = {100} color = 'black' />}
             </styled.CardsContainer>
         </styled.Container>
     )

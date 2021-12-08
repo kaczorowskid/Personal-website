@@ -13,9 +13,6 @@ export const Container = styled.div`
 
 export const Compjuter = styled.div`
     top: 0;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     border: 5px solid black;
     width: 40%;
     height: 45vh;

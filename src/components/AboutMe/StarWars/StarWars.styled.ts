@@ -12,6 +12,7 @@ export const Container = styled.div`
 `;
 
 export const CardsContainer = styled.div`
+    padding: 5px;
     width: 1000px;
     border: 5px solid black;
     display: flex;
