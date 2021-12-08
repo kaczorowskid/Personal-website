@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import * as styled from './Device.styled';
 import site from '../../../assets/img/stronka.png'
-import { motion, useMotionValue, useViewportScroll } from 'framer-motion'
+import { useScrollValue } from '../../../hooks/useScrollValue';
 
 const Device: React.FC = () => {
 
-    const [scrollValue, setScrollValue] = useState<number>(0);
-    
-    const checkScroll = () => setScrollValue(window.scrollY);
-    
-    useEffect(() => {
-      window.addEventListener('scroll', checkScroll);
-      return () => window.removeEventListener('scroll', checkScroll);
-    })
-
-
+    const { scrollValue } = useScrollValue();
 
     return (
         <>
@@ -23,8 +14,6 @@ const Device: React.FC = () => {
                 <styled.Text>Check About section ;)</styled.Text>
             </styled.TextContainer>
             <styled.Mask />
-            {/* <styled.Compjuter /> */}
-
                 <styled.ImageConatiner>
                     <img style={{ width: '100%', height: '100%' }} src={site} alt="" />
                 </styled.ImageConatiner>
