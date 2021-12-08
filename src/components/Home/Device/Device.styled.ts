@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import kotel from '../../../assets/img/kotel.png';
+import stopka from '../../../assets/img/stopka.png';
 
 
 export const Container = styled.div`
@@ -9,7 +10,7 @@ export const Container = styled.div`
     /* border: 1px solid green; */
     position: relative;
     /* background: #333353; */
-    background: #0f1223;
+    background: black;
     z-index: 0;
 `;
 
@@ -30,13 +31,13 @@ export const Compjuter = styled.div`
 export const ImageConatiner = styled.div`
     position: absolute;
     /* width: 40%; */
-    width: 50%;
+    width: 40%;
     /* border: 2px solid red; */
     top: 49%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* height: 180vh; */
-    height: 200vh;
+    height: 180vh;
     z-index: -1;
 `;
 
@@ -52,22 +53,25 @@ export const Mask = styled.div`
     &::before {
         content: '';
         width: 100%;
-        height: 18vh;;
+        height: 27.5vh;
         position: absolute;
         top: 0;
         left: 0;
-        background: #0f1223;
+        background: black;
     }
 
     &::after{
         content: '';
         width: 100%;
-        height: 23vh;
+        height: 32.5vh;
         position: absolute;
         bottom: 0;
         left: 0;
-        background: #0f1223;
+        background: black;
 
+        background-image: url(${stopka});
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
     }
 `;
 
@@ -79,9 +83,11 @@ export const TextContainer = styled.div<{pos?: number}>`
     position: fixed;
     z-index: -1;
     left: calc(120vh + 100% - ${({ pos }) => (pos! / window.screen.width * 1.5) * 100}%);
+    text-align: center;
 `;
 
 export const Text = styled.span`
+    font-family: 'Press Start 2P';
     font-size: 30px;
     color: white;
 `;

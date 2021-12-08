@@ -20,10 +20,8 @@ const Device: React.FC = () => {
         <>
             <styled.Container>
             <styled.TextContainer pos = {scrollValue} >
-                <styled.Text>Hi my name is Damian</styled.Text>
+                <styled.Text>Check About section ;)</styled.Text>
             </styled.TextContainer>
-                {/* <styled.Text>Hi my name is Damian {`${scrollYProgress}`}</styled.Text> */}
-
             <styled.Mask />
                 <styled.ImageConatiner>
                     <img style={{ width: '100%', height: '100%' }} src={site} alt="" />
