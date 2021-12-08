@@ -7,13 +7,6 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    background-image: url(${pieselwut}); */
 `;
 
 export const Wrapper = styled.div`
@@ -40,4 +33,10 @@ export const ImageConatiner = styled.div`
     justify-content: center;
     align-items: center;
 `;
+
+export const Image = styled.img`
+    width: 100%;
+    height: 100%;
+`;
+
 
