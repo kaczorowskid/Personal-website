@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import kotel from '../../../assets/img/kotel.png';
 import stopka from '../../../assets/img/stopka.png';
 
 
@@ -7,18 +6,16 @@ export const Container = styled.div`
     top: 0;
     width: 100%;
     height: 240vh;
-    /* border: 1px solid green; */
     position: relative;
-    /* background: #333353; */
     background: black;
     z-index: 0;
 `;
 
 export const Compjuter = styled.div`
-    position: sticky;
-    top: 50%;
+    top: 0;
+    /* top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     border: 5px solid black;
     width: 40%;
     height: 45vh;
@@ -30,13 +27,10 @@ export const Compjuter = styled.div`
 
 export const ImageConatiner = styled.div`
     position: absolute;
-    /* width: 40%; */
     width: 40%;
-    /* border: 2px solid red; */
     top: 49%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* height: 180vh; */
     height: 180vh;
     z-index: -1;
 `;
@@ -71,7 +65,8 @@ export const Mask = styled.div`
 
         background-image: url(${stopka});
         background-repeat: no-repeat;
-        background-size: 100% 50%;
+        background-size: 25% 50%;
+        background-position: 50% 0;
     }
 `;
 

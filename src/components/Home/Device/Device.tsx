@@ -23,6 +23,8 @@ const Device: React.FC = () => {
                 <styled.Text>Check About section ;)</styled.Text>
             </styled.TextContainer>
             <styled.Mask />
+            {/* <styled.Compjuter /> */}
+
                 <styled.ImageConatiner>
                     <img style={{ width: '100%', height: '100%' }} src={site} alt="" />
                 </styled.ImageConatiner>
