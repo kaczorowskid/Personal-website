@@ -24,7 +24,7 @@ const StarWarsCard: React.FC = () => {
     return (
         <styled.Container data={data}>
             <styled.ExitIcon onClick = {() => navigate(aboutMe)} />
-            {!!data ? <Fragment>
+            {data ? <Fragment>
                 <styled.TextContainer>
                     <styled.LineTitle>Title</styled.LineTitle>
                     <styled.Text>{data.title}</styled.Text>

@@ -3,7 +3,7 @@ import postsReducer from '../reducers/movies';
 
 export const store = configureStore({
     reducer: {
-        post: postsReducer
+        movies: postsReducer
     }
 })
 
