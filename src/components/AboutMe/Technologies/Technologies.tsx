@@ -18,7 +18,7 @@ const Technologies: React.FC = () => {
                     <Fragment key={i}>
                         <styled.Title>{key}</styled.Title>
                         <styled.ItemsContainer>
-                            {value.map((technology: string) => <styled.Item>{technology}</styled.Item>
+                            {value.map((technology: string, valI: number) => <styled.Item key = {valI}>{technology}</styled.Item>
                             )}
                         </styled.ItemsContainer>
                     </Fragment>

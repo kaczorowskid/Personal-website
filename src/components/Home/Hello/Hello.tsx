@@ -22,6 +22,7 @@ const Hello: React.FC = () => {
       <styled.TextContainer pos={scrollValue}>
         {[...'Damian'].map((letter: string, i: number) => (
           <styled.Text
+            key = {i}
             initial={{ x: rand(0, -window.screen.width / 2), y: rand(0, -window.screen.height) }}
             animate={{ x: 0, y: 0 }}
             transition={{ duration: 2 }}
