@@ -8,6 +8,7 @@ import Navbar from '../../components/Navbar/Navbar';
 
 import { useDispatch } from 'react-redux'
 import { getAllMovies } from '../../reducers/movies';
+import Technologies from '../../components/AboutMe/Technologies/Technologies';
 
 const AboutMe: React.FC = () => {
 
@@ -23,6 +24,7 @@ const AboutMe: React.FC = () => {
       <Welcome />
       <PersonalDescription />
       <Gallery />
+      <Technologies />
       <StarWars />
       <Footer />
     </>
