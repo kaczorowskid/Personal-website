@@ -54,16 +54,18 @@ export const Mask = styled.div`
     transform: translate(-50%, 0%);
     background: white;
     border-bottom: 5px solid black;
+    /* background: blue; */
   }
 
   &::after{
     content: '';
     width: 100%;
-    height: 32.5vh;
+    height: 33.5vh;
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 0;
     background: white;
+
 
     background-image: url(${stopka});
     background-repeat: no-repeat;

@@ -9,7 +9,7 @@ export const useScrollValue = () => {
   useEffect(() => {
     window.addEventListener('scroll', checkScroll);
     return () => window.removeEventListener('scroll', checkScroll);
-  })
+  }, [])
 
   return {
     scrollValue

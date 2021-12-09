@@ -8,7 +8,7 @@ import Navbar from '../../components/Navbar/Navbar';
 const Home: React.FC = () => {
   return (
     <>
-      <Navbar blob = {false}/>
+      <Navbar />
       <Hello />
       <Device />
       <End />

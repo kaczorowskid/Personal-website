@@ -20,7 +20,7 @@ const AboutMe: React.FC = () => {
 
   return (
     <>
-      <Navbar blob = {true}/>
+      <Navbar />
       <Welcome />
       <PersonalDescription />
       <Gallery />
