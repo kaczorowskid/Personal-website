@@ -8,6 +8,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import { useDispatch } from 'react-redux'
 import { getAllMovies } from '../../reducers/movies';
 import Technologies from '../../components/AboutMe/Technologies/Technologies';
+import Test from '../../components/AboutMe/Test/Test';
 
 const AboutMe: React.FC = () => {
 
@@ -19,7 +20,7 @@ const AboutMe: React.FC = () => {
 
   return (
     <>
-      <Navbar  />
+      <Navbar />
       <Welcome />
       <PersonalDescription />
       <Gallery />

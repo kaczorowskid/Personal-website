@@ -64,8 +64,9 @@ export const HamburgerMenuContainer = styled(motion.div)`
   bottom: 0;
   left: 0;
   height: calc(100vh - 100px);
+  /* height: 100vh; */
   width: 100vw;
-  background: black;
+  background: blue;
   z-index: 10;
   opacity: 0.9;
   display: flex;

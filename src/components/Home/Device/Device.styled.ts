@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import stopka from '../../../assets/img/stopka.png';
-
-
+import { device } from "../../../helper/deviceSize";
 
 export const Container = styled.div`
   top: 0;
@@ -10,17 +9,6 @@ export const Container = styled.div`
   position: relative;
   background: white;
   z-index: 0;
-`;
-
-export const Compjuter = styled.div`
-  top: 0;
-  border: 5px solid black;
-  width: 40%;
-  height: 45vh;
-  margin-top: calc(40vh);
-  background: red;
-  opacity: 0.5;
-  z-index: 100;
 `;
 
 export const ImageConatiner = styled.div`
@@ -33,6 +21,10 @@ export const ImageConatiner = styled.div`
   z-index: -1;
   border-left: 5px solid black;
   border-right: 5px solid black;
+
+  @media only screen and (${device.laptop}) {
+    width: 90%;
+  }
 `;
 
 export const Mask = styled.div`
@@ -54,7 +46,10 @@ export const Mask = styled.div`
     transform: translate(-50%, 0%);
     background: white;
     border-bottom: 5px solid black;
-    /* background: blue; */
+    
+    @media only screen and (${device.laptop}) {
+      width: 90%;
+    }
   }
 
   &::after{
@@ -66,11 +61,14 @@ export const Mask = styled.div`
     left: 0;
     background: white;
 
-
     background-image: url(${stopka});
     background-repeat: no-repeat;
     background-size: 40.5% 40%;
     background-position: 50% 0;
+
+    @media only screen and (${device.laptop}) {
+      background-size: 90.5% 40%;
+    }
   }
 `;
 
@@ -83,6 +81,10 @@ export const TextContainer = styled.div<{pos?: number}>`
   z-index: -1;
   left: calc(120vh + 100% - ${({ pos }) => (pos! / window.screen.width * 1.5) * 100}%);
   text-align: center;
+
+  @media only screen and (${device.laptop}) {
+    display: none;
+  }
 `;
 
 export const Text = styled.span`

@@ -10,11 +10,11 @@ const Welcome: React.FC = () => {
   return (
     <styled.Wrapper>
       <styled.Container>
-        <styled.ImageContainer
+        {/* <styled.ImageContainer
           {...imageVariant}
         >
           <img style={{ width: '100%', height: '100%' }} src={programist} alt="programist" />
-        </styled.ImageContainer>
+        </styled.ImageContainer> */}
         <styled.ContentContainer>
           <styled.MyWelcomeContainer>
             {[..."Hi I'm Damian"].map((item, i, array) => {

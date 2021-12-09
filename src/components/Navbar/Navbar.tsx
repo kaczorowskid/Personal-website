@@ -22,7 +22,7 @@ const Navbar: React.FC= () => {
   };
 
   const menu = {
-    initial: { y: -window.screen.height },
+    initial: { y: -2000 },
     animate: { y: 0 },
   }
 
