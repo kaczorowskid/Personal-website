@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { IRoutingTypes } from '../types/IRoutingType';
+import { IRouting } from '../types/IRouting';
 
 interface Props {
-    routes: Array<IRoutingTypes>
+    routes: Array<IRouting>
 }
 
 const AppRouting: React.FC<Props> = ({ routes }) => {
@@ -11,7 +11,7 @@ const AppRouting: React.FC<Props> = ({ routes }) => {
     return (
         <Router>
             <Routes>
-                {routes.map((route: IRoutingTypes, i: number) => (
+                {routes.map((route: IRouting, i: number) => (
                     <Route key = {i} path = {route.path} element = {route.element} />
                 ))}
             </Routes>

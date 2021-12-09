@@ -7,13 +7,13 @@ import StarWarsMovieInfo from './views/StarWarsMovieInfo/StarWarsMovieInfo';
 
 import { config } from './config';
 import AppRouting from './routes/AppRouting';
-import { IRoutingTypes } from './types/IRoutingType';
+import { IRouting } from './types/IRouting';
 
 const App = () => {
 
   const { home, aboutMe, movie } = config.routerPath;
 
-  const routes: Array<IRoutingTypes> = [
+  const routes: Array<IRouting> = [
     {
       path: home,
       element: <Home />
