@@ -4,22 +4,28 @@ import blobsSvg from '../../assets/img/blobs.svg';
 import { config } from '../../config';
 import { useNavigate } from 'react-router';
 
-const Navbar: React.FC = () => {
+interface Props {
+  blob: boolean
+}
+
+const Navbar: React.FC<Props> = ({ blob }) => {
 
   const { aboutMe, home } = config.routerPath;
   const navigate = useNavigate();
 
   return (
+    <>
+    {blob && <styled.ImgContainer>
+      <styled.Image src={blobsSvg} alt="plask kropeczka" />
+    </styled.ImgContainer>}
     <styled.Container>
-      {/* <styled.ImgContainer>
-        <img style={{ width: '100%' }} src={blobsSvg} alt="plask kropeczka" />
-      </styled.ImgContainer> */}
       <styled.LogoContainer>OK site</styled.LogoContainer>
       <styled.RouterButtonContainer>
         <styled.RouterButton btnColor='yellow' onClick={() => navigate(home)} >Home</styled.RouterButton>
         <styled.RouterButton btnColor='white' onClick={() => navigate(aboutMe)} >About</styled.RouterButton>
       </styled.RouterButtonContainer>
     </styled.Container>
+    </>
   )
 }
 

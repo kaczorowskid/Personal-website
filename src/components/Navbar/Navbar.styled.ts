@@ -10,11 +10,15 @@ export const Container = styled.div`
 `;
 
 export const ImgContainer = styled.div`
-  position: absolute;
+  position: fixed;
   right: 0;
   overflow: hidden;
   width: 25vw;
   z-index: -1;
+`;
+
+export const Image = styled.img`
+  width: 100%;
 `;
 
 export const LogoContainer = styled.div`
