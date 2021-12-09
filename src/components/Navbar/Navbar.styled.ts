@@ -13,7 +13,7 @@ export const Container = styled.div`
 `;
 
 export const LogoContainer = styled.div`
-  width: 20%;
+  width: 50%;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -50,7 +50,7 @@ export const HamburgerContainer = styled.div`
 
 export const HamburgerLine = styled(motion.div)`
   position: relative;
-  top: 25%;
+  top: 20%;
   width: 100%;
   height: 5px;
   background: yellow;

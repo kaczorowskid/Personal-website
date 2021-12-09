@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
     initial: { rotate: "0deg" },
     animate: { y: ".35rem", rotate: "45deg" },
   };
-  const lineThreeVariants = {
+  const lineTwoVariants = {
     initial: { rotate: "0deg" },
     animate: { y: "-.35rem", rotate: "-45deg" },
   };
@@ -37,12 +37,13 @@ const Navbar: React.FC = () => {
               animate={menuOpen ? "animate" : "initial"}
             />
             <styled.HamburgerLine
-              variants={lineThreeVariants}
+              variants={lineTwoVariants}
               initial="initial"
               animate={menuOpen ? "animate" : "initial"}
             />
           </styled.HamburgerContainer>
         </styled.RouterButtonContainer>}
+        
       </styled.Container>
     </>
   )
