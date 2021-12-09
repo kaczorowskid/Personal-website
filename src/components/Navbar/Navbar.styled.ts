@@ -56,3 +56,14 @@ export const HamburgerLine = styled(motion.div)`
   background: yellow;
   margin: 5px 0;
 `;
+
+export const HamburgerMenuContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: calc(100vh - 100px);
+  width: 100vw;
+  background: black;
+  z-index: 1;
+  opacity: 0.9;
+`;

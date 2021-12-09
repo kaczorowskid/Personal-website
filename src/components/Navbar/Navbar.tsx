@@ -29,22 +29,24 @@ const Navbar: React.FC = () => {
           <styled.RouterButton btnColor='yellow' onClick={() => navigate(home)} >Home</styled.RouterButton>
           <styled.RouterButton btnColor='white' onClick={() => navigate(aboutMe)} >About</styled.RouterButton>
         </styled.RouterButtonContainer> :
-        <styled.RouterButtonContainer>
-          <styled.HamburgerContainer onClick = {() => setMenuOpen(prev => !prev)}>
-            <styled.HamburgerLine
-              variants={lineOneVariants}
-              initial="initial"
-              animate={menuOpen ? "animate" : "initial"}
-            />
-            <styled.HamburgerLine
-              variants={lineTwoVariants}
-              initial="initial"
-              animate={menuOpen ? "animate" : "initial"}
-            />
-          </styled.HamburgerContainer>
-        </styled.RouterButtonContainer>}
-        
+          <styled.RouterButtonContainer>
+            <styled.HamburgerContainer onClick={() => setMenuOpen(prev => !prev)}>
+              <styled.HamburgerLine
+                variants={lineOneVariants}
+                initial="initial"
+                animate={menuOpen ? "animate" : "initial"}
+              />
+              <styled.HamburgerLine
+                variants={lineTwoVariants}
+                initial="initial"
+                animate={menuOpen ? "animate" : "initial"}
+              />
+            </styled.HamburgerContainer>
+          </styled.RouterButtonContainer>}
       </styled.Container>
+      {menuOpen && <styled.HamburgerMenuContainer>
+
+      </styled.HamburgerMenuContainer>}
     </>
   )
 }
