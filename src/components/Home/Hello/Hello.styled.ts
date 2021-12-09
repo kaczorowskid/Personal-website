@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import mcgowan from '../../../assets/img/mcgowan.jpg';
 
@@ -10,22 +11,19 @@ export const Container = styled.div`
   position: sticky;
   top: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 `;
 
-export const TextContainer = styled.div<{pos: number}>`
+export const TextContainer = styled.div<{pos?: number}>`
   position: relative;
-  /* width: 100px;
-  height: 100px; */
-  /* background: red; */
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+  display: flex;
+  text-align: center;
   top: calc(-${({ pos}) => (pos! / window.screen.height) * 30}%);
 `;
 
-export const Text = styled.div`
+export const Text = styled(motion.div)`
   color: yellow;
   font-size: 5rem;
   font-family: 'Press Start 2P';

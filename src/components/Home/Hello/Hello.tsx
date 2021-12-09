@@ -16,20 +16,17 @@ const Hello: React.FC = () => {
 
   return (
     <styled.Container>
-      {/* {[...'dupa'].map((letter, i) => {
-        return (
-          <>
-            <motion.div
-            style = {{color: 'yellow', fontSize: '50px', position: 'relative', top: '300px'}}
-            initial = {{x: rand(0, window.screen.width), y: rand(0, window.screen.height)}}
-            animate = {{x: 0, y: 0}}
-            transition = {{duration: 2}}
-            >{letter}</motion.div>
-          </>
-        )
-      })} */}
-      <styled.TextContainer pos = {scrollValue}>
-        <styled.Text>Damian</styled.Text>
+      <styled.TextContainer pos={scrollValue}>
+        <styled.Text>Hi, my name is</styled.Text>
+      </styled.TextContainer>
+      <styled.TextContainer pos={scrollValue}>
+        {[...'Damian'].map((letter: string, i: number) => (
+          <styled.Text
+            initial={{ x: rand(0, -window.screen.width / 2), y: rand(0, -window.screen.height) }}
+            animate={{ x: 0, y: 0 }}
+            transition={{ duration: 2 }}
+          >{letter}</styled.Text>
+        ))}
       </styled.TextContainer>
       <ScrollDownIcon />
     </styled.Container>
