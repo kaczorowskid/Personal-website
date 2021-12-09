@@ -21,6 +21,7 @@ export const CardsContainer = styled.div`
   position: relative;
   background: white;
   border-radius: 20px;
+  margin-bottom: 50px;
 
   &::after {
     content: "";
