@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -8,7 +9,7 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-export const ContentContainer = styled.div`
+export const ContentContainer = styled(motion.div)`
     width: 850px;
     height: 500px;
     border: 5px solid black;
@@ -16,8 +17,9 @@ export const ContentContainer = styled.div`
     flex-direction: column;
     position: relative;
     border-radius: 20px;
+    transform-style: preserve-3d;
 
-    &::before {
+    &::after {
         content: "";
         position: absolute;
         width: 100%;
@@ -25,8 +27,8 @@ export const ContentContainer = styled.div`
         background: #b0b0b0;
         top: -20px;
         left: -20px;
-        z-index: -1;
         border-radius: 20px;
+        transform: translateZ(-1px);
     }
 `;
 

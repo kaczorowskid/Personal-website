@@ -28,7 +28,7 @@ export const CardsContainer = styled.div`
     }
 `;
 
-export const Card = styled.div`
+export const Card = styled.div<{title: string}>`
     width: 30%;
     height: 90%;
     border: 3px solid #d6d4f2;
@@ -36,40 +36,46 @@ export const Card = styled.div`
     transform-style: preserve-3d;
     background: #f2f2f2;
     border-radius: 20px;
-    /* transition: all 2s; */
+    cursor: pointer;
 
-
-    /* &::before {
+    &::before {
         content: "";
         position: absolute;
         width: 100%;
         height: 100%;
-        background: #b3aee7;
-        border-radius: 20px;
-        top: 10px;
+        top: 20px;
         left: 20px;
+        background: #cdb0d1;
         transform: translateZ(-1px);
-    } */
+        border-radius: 20px;
+    }
 
-    &:hover::after {
-        content: "asdasdsa";
+    &::after {
+        content: "${({ title }) => title}";
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
         border-radius: 20px;
-        background: green;
-        /* opacityuy */
-        transition: all 2s;
+        background: #f2f2f2;
+        transition: all 1s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+    }
 
+    &:hover::after {
+        opacity: 0;
+        transition: all 1s;
     }
 `;
 
 export const CardTitleContainer = styled.div`
     width: 100%;
     height: 20%;
-    /* border: 1px solid red; */
     text-align: center;
     display: flex;
     justify-content: center;
@@ -78,12 +84,14 @@ export const CardTitleContainer = styled.div`
 `;
 export const CardContentContainer = styled.div`
     width: 100%;
-    height: 80%;
+    height: 100%;
     text-align: justify;
     padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const Text = styled.span`
-    /* color: white; */
     font-size: 1rem;
 `;
