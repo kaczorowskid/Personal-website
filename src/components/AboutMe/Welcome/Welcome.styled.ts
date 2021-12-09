@@ -21,6 +21,10 @@ export const Container = styled.div`
 export const ImageContainer = styled(motion.div)`
   width: 530px;
   height: 410px;
+
+  @media only screen and (${device.laptop}) {
+    display: none;
+  }
 `;
 
 export const ContentContainer = styled.div`

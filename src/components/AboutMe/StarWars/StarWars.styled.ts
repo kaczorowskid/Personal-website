@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import stars from '../../../assets/img/stars.svg';
+import { device } from "../../../helper/deviceSize";
 
 export const Container = styled.div`
   margin-top: 40px;
@@ -22,6 +23,10 @@ export const CardsContainer = styled.div`
   background: white;
   border-radius: 20px;
   margin-bottom: 50px;
+
+  @media only screen and (${device.laptop}) {
+    width: 90%;
+  }
 
   &::after {
     content: "";
