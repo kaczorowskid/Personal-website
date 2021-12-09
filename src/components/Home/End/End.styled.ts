@@ -36,9 +36,10 @@ export const Card = styled.div`
     transform-style: preserve-3d;
     background: #f2f2f2;
     border-radius: 20px;
+    /* transition: all 2s; */
 
 
-    &::before {
+    /* &::before {
         content: "";
         position: absolute;
         width: 100%;
@@ -48,7 +49,7 @@ export const Card = styled.div`
         top: 10px;
         left: 20px;
         transform: translateZ(-1px);
-    }
+    } */
 
     &:hover::after {
         content: "asdasdsa";
@@ -59,7 +60,9 @@ export const Card = styled.div`
         left: 0;
         border-radius: 20px;
         background: green;
+        /* opacityuy */
         transition: all 2s;
+
     }
 `;
 
