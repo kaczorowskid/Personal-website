@@ -9,9 +9,6 @@ const End: React.FC = () => {
             <styled.CardsContainer>
                 {starWarsFacts.map((fact: IFacts, i: number) => (
                     <styled.Card title = {fact.title}>
-                        {/* <styled.CardTitleContainer>
-                            <styled.Text>{fact.title}</styled.Text>
-                        </styled.CardTitleContainer> */}
                         <styled.CardContentContainer>
                             <styled.Text>{fact.content}</styled.Text>
                         </styled.CardContentContainer>

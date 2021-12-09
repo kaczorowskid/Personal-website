@@ -24,7 +24,7 @@ export const TextContainer = styled.div<{pos?: number}>`
 `;
 
 export const Text = styled(motion.div)`
-  color: yellow;
+  color: #646400;
   font-size: 4rem;
   font-family: 'Press Start 2P';
 `;

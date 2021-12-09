@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
       </styled.ImgContainer> */}
       <styled.LogoContainer>OK site</styled.LogoContainer>
       <styled.RouterButtonContainer>
-        <styled.RouterButton btnColor='black' onClick={() => navigate(home)} >Home</styled.RouterButton>
+        <styled.RouterButton btnColor='yellow' onClick={() => navigate(home)} >Home</styled.RouterButton>
         <styled.RouterButton btnColor='white' onClick={() => navigate(aboutMe)} >About</styled.RouterButton>
       </styled.RouterButtonContainer>
     </styled.Container>

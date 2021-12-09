@@ -12,5 +12,5 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.span`
-  color: white;
+  color: yellow;
 `;
