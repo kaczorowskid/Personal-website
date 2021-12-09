@@ -4,14 +4,14 @@ import Hello from '../../components/Home/Hello/Hello';
 import Navbar from '../../components/Navbar/Navbar';
 
 const Home: React.FC = () => {
-    return (
-        <>
-        <Navbar />
-        <Hello />
-        <Device />
-        <Hello />
-        </>
-    )
+  return (
+    <>
+      <Navbar />
+      <Hello />
+      <Device />
+      <Hello />
+    </>
+  )
 }
 
 export default Home;

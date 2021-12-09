@@ -11,22 +11,22 @@ import { getAllMovies } from '../../reducers/movies';
 
 const AboutMe: React.FC = () => {
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(getAllMovies())
-    }, [])
+  useEffect(() => {
+    dispatch(getAllMovies())
+  }, [])
 
-    return (
-        <>
-            <Navbar />
-            <Welcome />
-            <PersonalDescription />
-            <Gallery />
-            <StarWars />
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      <Navbar />
+      <Welcome />
+      <PersonalDescription />
+      <Gallery />
+      <StarWars />
+      <Footer />
+    </>
+  )
 }
 
 export default AboutMe;

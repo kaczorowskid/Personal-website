@@ -62,7 +62,7 @@ export const Mask = styled.div`
 
         background-image: url(${stopka});
         background-repeat: no-repeat;
-        background-size: 25% 50%;
+        background-size: 25% 40%;
         background-position: 50% 0;
     }
 `;
