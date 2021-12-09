@@ -13,10 +13,12 @@ export const Container = styled.div`
 `;
 
 export const LogoContainer = styled.div`
+  position: relative;
   width: 50%;
   height: 100px;
   display: flex;
-  justify-content: center;
+  left: 5%;
+  /* justify-content: center; */
   align-items: center;
   font-size: 20px;
   color: yellow;
@@ -57,13 +59,17 @@ export const HamburgerLine = styled(motion.div)`
   margin: 5px 0;
 `;
 
-export const HamburgerMenuContainer = styled.div`
-  position: absolute;
+export const HamburgerMenuContainer = styled(motion.div)`
+  position: fixed;
   bottom: 0;
   left: 0;
   height: calc(100vh - 100px);
   width: 100vw;
   background: black;
-  z-index: 1;
+  z-index: 10;
   opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 `;

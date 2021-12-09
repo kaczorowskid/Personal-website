@@ -6,12 +6,13 @@ import Hello from '../../components/Home/Hello/Hello';
 import Navbar from '../../components/Navbar/Navbar';
 
 const Home: React.FC = () => {
+
   return (
     <>
       <Navbar />
       <Hello />
       <Device />
-      <End />
+      {/* <End /> */}
       <Footer />
     </>
   )

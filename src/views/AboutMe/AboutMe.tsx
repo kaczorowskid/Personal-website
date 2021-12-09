@@ -5,7 +5,6 @@ import StarWars from '../../components/AboutMe/StarWars/StarWars';
 import Welcome from '../../components/AboutMe/Welcome/Welcome';
 import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/Navbar';
-
 import { useDispatch } from 'react-redux'
 import { getAllMovies } from '../../reducers/movies';
 import Technologies from '../../components/AboutMe/Technologies/Technologies';
@@ -20,7 +19,7 @@ const AboutMe: React.FC = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar  />
       <Welcome />
       <PersonalDescription />
       <Gallery />

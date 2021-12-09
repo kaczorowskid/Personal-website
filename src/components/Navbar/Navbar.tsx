@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import * as styled from './Navbar.styled';
-import blobsSvg from '../../assets/img/blobs.svg';
 import { config } from '../../config';
 import { useNavigate } from 'react-router';
 import { useIsMobile } from '../../hooks/useIsMobile';
 
-const Navbar: React.FC = () => {
+
+const Navbar: React.FC= () => {
 
   const { aboutMe, home } = config.routerPath;
   const navigate = useNavigate();
-  const { mobile } = useIsMobile();
+  const detectMobile = useIsMobile();
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
 
   const lineOneVariants = {
@@ -21,11 +21,16 @@ const Navbar: React.FC = () => {
     animate: { y: "-.35rem", rotate: "-45deg" },
   };
 
+  const menu = {
+    initial: { y: -window.screen.height },
+    animate: { y: 0 },
+  }
+
   return (
     <>
       <styled.Container>
         <styled.LogoContainer>OK site</styled.LogoContainer>
-        {!mobile ? <styled.RouterButtonContainer>
+        {!detectMobile.isMobile() ? <styled.RouterButtonContainer>
           <styled.RouterButton btnColor='yellow' onClick={() => navigate(home)} >Home</styled.RouterButton>
           <styled.RouterButton btnColor='white' onClick={() => navigate(aboutMe)} >About</styled.RouterButton>
         </styled.RouterButtonContainer> :
@@ -44,8 +49,14 @@ const Navbar: React.FC = () => {
             </styled.HamburgerContainer>
           </styled.RouterButtonContainer>}
       </styled.Container>
-      {menuOpen && <styled.HamburgerMenuContainer>
-
+      {<styled.HamburgerMenuContainer
+        variants={menu}
+        initial="initial"
+        animate={menuOpen ? 'animate' : 'initial'}
+        transition={{ duration: 1 }}
+      >
+        <styled.RouterButton btnColor='yellow' onClick={() => navigate(home)} >Home</styled.RouterButton>
+        <styled.RouterButton btnColor='white' onClick={() => navigate(aboutMe)} >About</styled.RouterButton>
       </styled.HamburgerMenuContainer>}
     </>
   )
