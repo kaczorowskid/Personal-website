@@ -26,7 +26,7 @@ const initialState: Istate = {
   dataOne: {}
 }
 
-const postsReducer = createSlice({
+const moviesReducer = createSlice({
   name: 'movies',
   initialState: initialState,
   reducers: {},
@@ -47,5 +47,5 @@ const postsReducer = createSlice({
   }
 })
 
-export default postsReducer.reducer;
+export default moviesReducer.reducer;
 

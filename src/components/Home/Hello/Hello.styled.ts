@@ -27,6 +27,6 @@ export const TextContainer = styled.div<{pos: number}>`
 
 export const Text = styled.div`
   color: yellow;
-  font-size: 30px;
+  font-size: 5rem;
   font-family: 'Press Start 2P';
 `;
