@@ -20,13 +20,23 @@ const AboutMe: React.FC = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Welcome />
       <PersonalDescription />
       <Gallery />
       <Technologies />
       <StarWars />
-      <Footer />
+      <Footer /> */}
+
+      <Navbar />
+
+      <Welcome />
+      <PersonalDescription />
+      <Gallery />
+      <Technologies />
+      <StarWars />
+      <Test />
+      <Test />
     </>
   )
 }

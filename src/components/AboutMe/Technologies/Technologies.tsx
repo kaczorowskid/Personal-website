@@ -7,7 +7,7 @@ const Technologies: React.FC = () => {
     return (
         <styled.Container>
             <styled.ContentContainer
-                initial={{ x: window.screen.width / 2}}
+                initial={{ x: window.screen.width / 2 }}
                 whileInView={{ x: 0 }}
                 viewport={{ once: true }}
                 transition={{
@@ -18,7 +18,7 @@ const Technologies: React.FC = () => {
                     <Fragment key={i}>
                         <styled.Title>{key}</styled.Title>
                         <styled.ItemsContainer>
-                            {value.map((technology: string, valI: number) => <styled.Item key = {valI}>{technology}</styled.Item>
+                            {value.map((technology: string, valI: number) => <styled.Item key={valI}>{technology}</styled.Item>
                             )}
                         </styled.ItemsContainer>
                     </Fragment>
