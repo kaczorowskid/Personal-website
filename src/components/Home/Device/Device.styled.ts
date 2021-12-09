@@ -2,12 +2,13 @@ import styled from "styled-components";
 import stopka from '../../../assets/img/stopka.png';
 
 
+
 export const Container = styled.div`
   top: 0;
   width: 100%;
   height: 240vh;
   position: relative;
-  background: black;
+  background: white;
   z-index: 0;
 `;
 
@@ -30,6 +31,8 @@ export const ImageConatiner = styled.div`
   transform: translate(-50%, -50%);
   height: 180vh;
   z-index: -1;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
 `;
 
 export const Mask = styled.div`
@@ -43,12 +46,14 @@ export const Mask = styled.div`
 
   &::before {
     content: '';
-    width: 100%;
+    width: 40%;
     height: 27.5vh;
     position: absolute;
     top: 0;
-    left: 0;
-    background: black;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: white;
+    border-bottom: 5px solid black;
   }
 
   &::after{
@@ -58,11 +63,11 @@ export const Mask = styled.div`
     position: absolute;
     bottom: 0;
     left: 0;
-    background: black;
+    background: white;
 
     background-image: url(${stopka});
     background-repeat: no-repeat;
-    background-size: 25% 40%;
+    background-size: 40.5% 40%;
     background-position: 50% 0;
   }
 `;
@@ -81,6 +86,6 @@ export const TextContainer = styled.div<{pos?: number}>`
 export const Text = styled.span`
   font-family: 'Press Start 2P';
   font-size: 30px;
-  color: white;
+  color: black;
 `;
 

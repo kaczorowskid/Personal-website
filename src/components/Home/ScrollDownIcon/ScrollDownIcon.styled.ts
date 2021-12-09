@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ScrollDown = styled.div`
-	border: 4px solid #000;
+	border: 4px solid red;
 	border-radius: 30px;
 	height: 46px;
 	margin: 0 auto 8px;
@@ -40,6 +40,6 @@ export const ScrollDownP = styled.circle<{isSecond?: boolean}>`
     animation-delay: ${({ isSecond }) => isSecond && '0.75s'};
 	animation-name: ${scrollDownAnim};
 	animation-iteration-count: infinite;
-	fill: #000;
+	fill: red;
 `;
 
