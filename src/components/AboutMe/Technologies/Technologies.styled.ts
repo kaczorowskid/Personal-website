@@ -11,9 +11,23 @@ export const Container = styled.div`
 export const ContentContainer = styled.div`
     width: 850px;
     height: 500px;
-    border: 5px solid orange;
+    border: 5px solid black;
     display: flex;
     flex-direction: column;
+    position: relative;
+    border-radius: 20px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #b0b0b0;
+        top: -20px;
+        left: -20px;
+        z-index: -1;
+        border-radius: 20px;
+    }
 `;
 
 export const Title = styled.div`
@@ -23,7 +37,6 @@ export const Title = styled.div`
     align-items: center;
     margin-left: 10px;
     font-size: 1.5rem;
-
 `;
 
 export const ItemsContainer = styled.div`
