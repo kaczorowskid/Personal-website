@@ -12,6 +12,8 @@ In project used:
 
 ## Available Scripts
 
+First, you must clone repo. 
+
 In the project directory, you can run:
 
 ### `npm install`
@@ -21,3 +23,5 @@ to install the dependencies.
 ### `npm start`
 
 to run the app in the development mode at [http://localhost:3000](http://localhost:3000)<br />
+
+
