@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import stars from '../../../assets/img/stars.svg';
 import { device } from "../../../helper/deviceSize";
+import { colorConfig } from "../../../colorsConfig";
 
 export const Container = styled.div`
   margin-top: 40px;
@@ -15,12 +16,12 @@ export const Container = styled.div`
 export const CardsContainer = styled.div`
   padding: 5px;
   width: 1000px;
-  border: 5px solid black;
+  border: 5px solid ${colorConfig.black};
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  background: white;
+  background: ${colorConfig.white};
   border-radius: 20px;
   margin-bottom: 50px;
 
@@ -32,7 +33,7 @@ export const CardsContainer = styled.div`
     content: "";
     width: 100%;
     height: 100%;
-    background: #393535;
+    background: ${colorConfig.lighterBlack};
     top: 30px;
     left: 30px;
     position: absolute;
@@ -53,12 +54,12 @@ export const StarWarsCardContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 4px solid white;
+  border: 4px solid ${colorConfig.white};
   cursor: pointer;
   border-radius: 10px;
 
   &:hover {
-    border: 4px solid yellow;
+    border: 4px solid ${colorConfig.yellow};
   }
 `;
 
@@ -75,7 +76,7 @@ export const StarWarsHeaderConatiner = styled.div`
 
 export const StarWarsHeader = styled.span`
   font-family: 'Press Start 2P';
-  color: #f6e41a;
+  color: ${colorConfig.lightYellow};
 `;
 
 export const TitleContainer = styled.div`
@@ -88,7 +89,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const MovieTitle = styled.div`
-  color: white;
+  color: ${colorConfig.white};
   font-size: 15px;
   font-family: 'Press Start 2P';
 `;
