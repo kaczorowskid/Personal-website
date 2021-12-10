@@ -69,7 +69,6 @@ export const DescriptionContainer = styled.div`
 `;
 
 export const Description = styled(motion.span)`
-  /* font-size: 36px; */
   font-size: 2rem;
 
   @media only screen and (${device.laptop}) {
