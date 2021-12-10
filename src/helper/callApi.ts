@@ -1,10 +1,3 @@
-export const callApi = async (url: string) => {
-  let response: any, error: any
-  response = fetch(url)
-    .then(res => res.json())
-    .catch(err => {
-      error = err
-    })
-
-  return { response, error }
+export const callApi = async <T>(url: string): Promise<T> => {
+  return fetch(url).then(response => response.json().then(data => data as T))
 }
