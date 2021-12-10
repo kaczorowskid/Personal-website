@@ -3,6 +3,7 @@ import { config } from "../config";
 import { callApi } from "../helper/callApi";
 import { IMovie } from "../types/IMovie";
 import { IMovies } from "../types/IMovies";
+import { Istate, moviesStateMock } from "./stateMock/moviesStateMock";
 
 const { moviesApiPath } = config.requestsPath
 
@@ -16,28 +17,7 @@ export const getOneMovie = createAsyncThunk('movies/getOneMovie', async (movieId
   return response
 })
 
-interface Istate {
-  dataAll: IMovies;
-  dataOne: IMovie;
-}
-
-const initialState: Istate = {
-  dataAll: {
-    results: [
-      {
-        title: '',
-        url: ''
-      }
-    ]
-  },
-  dataOne: {
-    title: '',
-    opening_crawl: '',
-    director: '',
-    producer: '',
-    release_date: '',
-  }
-}
+const initialState = moviesStateMock;
 
 const moviesReducer = createSlice({
   name: 'movies',
