@@ -61,7 +61,6 @@ export const Mask = styled.div`
     bottom: -10px;
     left: 0;
     background: ${colorConfig.white};
-
     background-image: url(${stopka});
     background-repeat: no-repeat;
     background-size: 40.5% 40%;
