@@ -6,6 +6,7 @@ export const Container = styled.div<{ data?: any }>`
   width: 1000px;
   height: 700px;
   border: 5px solid white;
+  border-radius: 10px;
   -webkit-box-shadow: 8px 10px 8px 0px rgba(255, 255, 255, 0.5);
   -moz-box-shadow: 8px 10px 8px 0px rgba(255, 255, 255, 0.5);
   box-shadow: 8px 10px 8px 0px rgba(255, 255, 255, 0.5);
@@ -46,7 +47,7 @@ export const Text = styled.span`
   text-align: justify;
 
   @media only screen and (${device.laptop}) {
-    width: 65%;
+    width: 60%;
     font-size: 0.8rem;
   }
 `;
