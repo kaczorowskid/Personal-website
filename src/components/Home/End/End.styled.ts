@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { device } from "../../../helper/deviceSize";
+import { colorConfig } from "../../../colorsConfig";
 
 export const Container = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
-  background: white;
+  background: ${colorConfig.white};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,10 +43,10 @@ export const CardsContainer = styled.div`
 export const Card = styled.div<{title: string, touch: number}>`
   width: 30%;
   height: 90%;
-  border: 3px solid #d6d4f2;
+  border: 3px solid ${colorConfig.beige};
   position: relative;
   transform-style: preserve-3d;
-  background: #f2f2f2;
+  background: ${colorConfig.lighterPink};
   border-radius: 20px;
   cursor: pointer;
   
@@ -61,7 +62,7 @@ export const Card = styled.div<{title: string, touch: number}>`
     height: 100%;
     top: 20px;
     left: 20px;
-    background: #cdb0d1;
+    background: ${colorConfig.lightPink};
     transform: translateZ(-1px);
     border-radius: 20px;
   }
@@ -74,7 +75,7 @@ export const Card = styled.div<{title: string, touch: number}>`
     top: 0;
     left: 0;
     border-radius: 20px;
-    background: #f2f2f2;
+    background: ${colorConfig.lighterPink};
     transition: all 1s;
     display: flex;
     justify-content: center;

@@ -1,5 +1,5 @@
 export const colorConfig = {
-    white: 'white',
+    white: '#ffffff',
     yellow: '#ffff00',
     darkYellow: '#646400',
     lightBlack: '#1b1b1b',
@@ -8,5 +8,6 @@ export const colorConfig = {
     pink: '#f1b9b9',
     gray: '#b0b0b0',
     red: '#ff0000',
-    black: '#000000'
+    black: '#000000',
+    beige: '#d6d4f2'
 }
