@@ -4,10 +4,14 @@ import { device } from "../../../helper/deviceSize";
 
 export const Container = styled.div`
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (${device.laptop}) {
+        margin: 20px 0;
+    }
 `;
 
 export const ContentContainer = styled(motion.div)`
@@ -31,10 +35,15 @@ export const ContentContainer = styled(motion.div)`
         width: 100%;
         height: 100%;
         background: #b0b0b0;
-        top: 20px;
-        left: -20px;
+        top: 30px;
+        left: -30px;
         border-radius: 20px;
         transform: translateZ(-1px);
+
+        @media only screen and (${device.laptop}) {
+            top: 20px;
+            left: -20px;
+        }
     }
 `;
 

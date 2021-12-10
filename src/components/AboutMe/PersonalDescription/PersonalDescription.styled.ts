@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { device } from "../../../helper/deviceSize";
 
 export const Container = styled.div`
   width: 100%;
@@ -21,6 +22,11 @@ export const CardContainer = styled(motion.div)`
   justify-content: space-evenly;
   align-items: center;
 
+  @media only screen and (${device.laptop}) {
+    width: 90%;
+    display: block;
+  }
+
   &::after {
     content: "";
     width: 100%;
@@ -30,24 +36,33 @@ export const CardContainer = styled(motion.div)`
     left: 30px;
     position: absolute;
     transform: translateZ(-1px);
-  }
-`;
 
-export const BlobContainer = styled(motion.div)`
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  z-index: -1;
+    @media only screen and (${device.laptop}) {
+      top: 20px;
+      left: 20px;
+    }
+  }
 `;
 
 export const ImageContainer = styled(motion.div)`
   width: 30%;
-  height: 60%;
+  height: 100%;
+
+  @media only screen and (${device.laptop}) {
+    width: 100%;
+    height: 30%;
+  }
 `;
 
 export const TextContainer = styled.div`
   width: 50%;
-  height: 60%;
+  height: 80%;
+
+  @media only screen and (${device.laptop}) {
+    width: 100%;
+    height: 70%;
+    text-align: center;
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -59,8 +74,8 @@ export const HeaderContainer = styled.div`
 `;
 
 export const Header = styled.div`
-  font-size: 36px;
   font-weight: bold;
+  font-size: 2rem;
 `;
 
 export const DescriptionContainer = styled.div`
@@ -71,6 +86,6 @@ export const DescriptionContainer = styled.div`
 `;
 
 export const Description = styled.div`
-  font-size: 24px;
-  text-align: justify;
+  text-align: center;
+  font-size: 1.3rem;
 `;

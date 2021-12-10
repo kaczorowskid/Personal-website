@@ -13,7 +13,7 @@ const PersonalDescription: React.FC = () => {
           duration: 1
         }}>
         <styled.ImageContainer>
-          <img style={{ width: '100%' }} src={face} alt="" />
+          <img style={{ width: '100%', height: '100%' }} src={face} alt="" />
         </styled.ImageContainer>
         <styled.TextContainer>
           <styled.HeaderContainer>

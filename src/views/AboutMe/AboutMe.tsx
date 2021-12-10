@@ -31,12 +31,11 @@ const AboutMe: React.FC = () => {
       <Navbar />
 
       <Welcome />
-      {/* <PersonalDescription /> */}
+      <PersonalDescription />
       <Gallery />
-      {/* <Technologies /> */}
-      {/* <StarWars /> */}
-      <Test />
-      <Test />
+      <Technologies />
+      <StarWars />
+      <Footer />
     </>
   )
 }
