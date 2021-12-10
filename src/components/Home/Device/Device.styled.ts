@@ -66,13 +66,14 @@ export const Mask = styled.div`
     background-size: 40.5% 40%;
     background-position: 50% 0;
 
+
     @media only screen and (${device.laptop}) {
       background-size: 90.5% 40%;
     }
   }
 `;
 
-export const TextContainer = styled.div<{pos?: number}>`
+export const TextContainer = styled.div<{ pos?: number }>`
   top: 50%;
   transform: translate(0%, -50%);
   width: 500px;

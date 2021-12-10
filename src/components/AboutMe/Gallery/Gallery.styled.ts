@@ -4,7 +4,7 @@ import { colorConfig } from "../../../colorsConfig";
 
 export const Container = styled.div`
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 500px;
+  height: 70%;
   background: ${colorConfig.pink};
   display: flex;
   justify-content: center;
