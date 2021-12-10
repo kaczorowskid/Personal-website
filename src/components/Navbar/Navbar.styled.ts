@@ -15,10 +15,9 @@ export const Container = styled.div`
 
 export const LogoContainer = styled.div`
   position: relative;
-  width: 50%;
+  left: 5%;
   height: 100px;
   display: flex;
-  left: 5%;
   align-items: center;
   font-size: 20px;
   color: ${colorConfig.yellow};
@@ -27,11 +26,13 @@ export const LogoContainer = styled.div`
 `;
 
 export const RouterButtonContainer = styled.div`
-  width: 20%;
+  position: relative;
+  right: 5%;
+  width: 15%;
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 
 export const RouterButton = styled.div<{btnColor: string}>`
