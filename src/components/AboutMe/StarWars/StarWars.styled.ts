@@ -29,6 +29,15 @@ export const CardsContainer = styled.div`
     width: 90%;
   }
 
+  &::before {
+    content: 'Favorite movies';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 1.7rem;
+  }
+
   &::after {
     content: "";
     width: 100%;
