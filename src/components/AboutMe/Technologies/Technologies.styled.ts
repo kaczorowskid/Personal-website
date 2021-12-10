@@ -12,6 +12,7 @@ export const Container = styled.div`
 
   @media only screen and (${device.laptop}) {
       margin: 20px 0;
+      height: 110vh;
   }
 `;
 
@@ -27,7 +28,16 @@ export const ContentContainer = styled(motion.div)`
 
   @media only screen and (${device.laptop}) {
     width: 90%;
-    height: 90%;
+    height: 80%;
+  }
+
+  &::before {
+    content: 'I know:';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 1.7rem;
   }
 
   &::after {
