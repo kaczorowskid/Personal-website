@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ScrollDown = styled.div`
-	border: 4px solid yellow;
+	border: 4px solid red;
 	border-radius: 30px;
 	height: 46px;
 	margin: 0 auto 8px;
