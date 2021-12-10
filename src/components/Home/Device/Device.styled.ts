@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import stopka from '../../../assets/img/stopka.png';
 import { device } from "../../../helper/deviceSize";
+import { colorConfig } from "../../../colorsConfig";
 
 export const Container = styled.div`
   top: 0;
   width: 100%;
   height: 240vh;
   position: relative;
-  background: white;
+  background: ${colorConfig.white};
   z-index: 0;
 `;
 
@@ -19,8 +20,8 @@ export const ImageConatiner = styled.div`
   transform: translate(-50%, -50%);
   height: 180vh;
   z-index: -1;
-  border-left: 5px solid black;
-  border-right: 5px solid black;
+  border-left: 5px solid ${colorConfig.black};
+  border-right: 5px solid ${colorConfig.black};
 
   @media only screen and (${device.laptop}) {
     width: 90%;
@@ -44,7 +45,7 @@ export const Mask = styled.div`
     top: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    background: white;
+    background: ${colorConfig.white};
     border-bottom: 5px solid black;
     
     @media only screen and (${device.laptop}) {
@@ -59,7 +60,7 @@ export const Mask = styled.div`
     position: absolute;
     bottom: -10px;
     left: 0;
-    background: white;
+    background: ${colorConfig.white};
 
     background-image: url(${stopka});
     background-repeat: no-repeat;
@@ -90,6 +91,6 @@ export const TextContainer = styled.div<{pos?: number}>`
 export const Text = styled.span`
   font-family: 'Press Start 2P';
   font-size: 30px;
-  color: black;
+  color: ${colorConfig.black};
 `;
 
