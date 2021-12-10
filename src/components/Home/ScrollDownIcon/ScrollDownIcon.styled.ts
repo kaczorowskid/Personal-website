@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { colorConfig } from "../../../colorsConfig";
 
 const scrollDownAnim = keyframes`
 	0% {
@@ -24,7 +25,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ScrollDown = styled.div`
-	border: 4px solid red;
+	border: 4px solid ${colorConfig.red};
 	border-radius: 30px;
 	height: 46px;
 	margin: 0 auto 8px;
@@ -39,6 +40,6 @@ export const ScrollDownPoint = styled.circle<{isSecond?: boolean}>`
   animation-delay: ${({ isSecond }) => isSecond && '0.75s'};
 	animation-name: ${scrollDownAnim};
 	animation-iteration-count: infinite;
-	fill: red;
+	fill: ${colorConfig.red};
 `;
 

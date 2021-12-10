@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import mcgowan from '../../../assets/img/mcgowan.jpg';
+import { colorConfig } from "../../../colorsConfig";
 
 export const Container = styled.div`
   width: 100%;
@@ -24,7 +25,7 @@ export const TextContainer = styled.div<{pos?: number}>`
 `;
 
 export const Text = styled(motion.div)`
-  color: #646400;
+  color: ${colorConfig.darkYellow};
   font-size: 4rem;
   font-family: 'Press Start 2P';
 `;
