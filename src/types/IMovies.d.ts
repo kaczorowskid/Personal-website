@@ -1,3 +1,3 @@
 export interface IMovies {
-    results: Array<{title: string, url: string}>
+  results: Array<{ title: string, url: string }>
 }

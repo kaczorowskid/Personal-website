@@ -1,7 +1,7 @@
 export interface IMovie {
-    title: string;
-    opening_crawl: string;
-    director: string;
-    producer: string;
-    release_date: string;
+  title: string;
+  opening_crawl: string;
+  director: string;
+  producer: string;
+  release_date: string;
 }

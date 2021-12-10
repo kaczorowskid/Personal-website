@@ -1,4 +1,4 @@
 export interface IFacts {
-    title: string,
-    content: string
+  title: string,
+  content: string
 }

@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ScrollDown = styled.div`
-	border: 4px solid red;
+	border: 4px solid yellow;
 	border-radius: 30px;
 	height: 46px;
 	margin: 0 auto 8px;
@@ -32,12 +32,11 @@ export const ScrollDown = styled.div`
 	width: 30px;
 `;
 
-export const SVGContainer = styled.svg`
-`;
+export const SVGContainer = styled.svg``;
   
 export const ScrollDownP = styled.circle<{isSecond?: boolean}>`
-    animation-duration: 1.5s;
-    animation-delay: ${({ isSecond }) => isSecond && '0.75s'};
+  animation-duration: 1.5s;
+  animation-delay: ${({ isSecond }) => isSecond && '0.75s'};
 	animation-name: ${scrollDownAnim};
 	animation-iteration-count: infinite;
 	fill: red;

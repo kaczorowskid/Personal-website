@@ -2,13 +2,7 @@ import React from 'react';
 import * as styled from './Hello.styled';
 import { useScrollValue } from '../../../hooks/useScrollValue';
 import ScrollDownIcon from '../ScrollDownIcon/ScrollDownIcon';
-
-function rand(min: number, max: number) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
+import { randomNumber } from '../../../helper/randomNumber';
 const Hello: React.FC = () => {
 
   const { scrollValue } = useScrollValue();
@@ -22,7 +16,7 @@ const Hello: React.FC = () => {
         {[...'Damian'].map((letter: string, i: number) => (
           <styled.Text
             key = {i}
-            initial={{ x: rand(0, -window.screen.width / 2), y: rand(0, -window.screen.height) }}
+            initial={{ x: randomNumber(0, -window.screen.width / 2), y: randomNumber(0, -window.screen.height) }}
             animate={{ x: 0, y: 0 }}
             transition={{ duration: 2 }}
           >{letter}</styled.Text>
