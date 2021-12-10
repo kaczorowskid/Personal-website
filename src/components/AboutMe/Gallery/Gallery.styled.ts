@@ -44,7 +44,7 @@ export const ImageConatiner = styled.div`
   align-items: center;
 
   @media only screen and (${device.laptop}) {
-    width: 90%;
+    width: 80%;
     height: 30%;
     margin: 10px 0;
   }

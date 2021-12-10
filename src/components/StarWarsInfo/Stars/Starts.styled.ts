@@ -28,7 +28,11 @@ export const ContentContainer = styled.div`
   align-items: center;
 
   @media only screen and (${device.laptop}) {
-    height: 150vh;
+    height: 130vh;
+  }
+
+  @media only screen and (${device.mobileM}) {
+    height: 170vh;
   }
 `;
 
@@ -84,12 +88,3 @@ export const Star3 = styled.div`
   }
 `;
 
-export const StarWarsTitle = styled.div`
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%);
-  font-family: 'Press Start 2P';
-  color: yellow;
-  font-size: 3rem;
-`;

@@ -12,7 +12,7 @@ export const Container = styled.div`
   align-items: center;
 
   @media only screen and (${device.laptop}) {
-    height: 120vh;
+    height: 140vh;
   }
 `;
 
@@ -26,7 +26,7 @@ export const CardsContainer = styled.div`
 
   @media only screen and (${device.laptop}) {
     width: 90%;
-    height: 100vh;
+    height: 140vh;
     flex-direction: column;
   }
 
@@ -37,10 +37,15 @@ export const CardsContainer = styled.div`
     top: -50px;
     left: 20px;
     font-family: 'Press Start 2P';
+
+    @media only screen and (${device.laptop}) {
+      font-size: 0.9rem;
+      top: -20px;
+    }
   }
 `;
 
-export const Card = styled.div<{title: string, touch: number}>`
+export const Card = styled.div<{ title: string, touch: number }>`
   width: 30%;
   height: 90%;
   border: 3px solid ${colorConfig.beige};
@@ -89,7 +94,7 @@ export const Card = styled.div<{title: string, touch: number}>`
     transition: all 1s;
   }
 
-  &:nth-child(${({ touch }) => touch })::after {
+  &:nth-child(${({ touch }) => touch})::after {
     opacity: 0;
   }
 `;

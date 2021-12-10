@@ -30,12 +30,13 @@ export const CardsContainer = styled.div`
   }
 
   &::before {
-    content: 'Favorite movies';
+    content: 'Favorite movies:';
     position: absolute;
     top: -40px;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    width: 100%;
     font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
   }
 
   &::after {

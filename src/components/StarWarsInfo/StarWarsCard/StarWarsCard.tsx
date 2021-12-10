@@ -23,28 +23,25 @@ const StarWarsCard: React.FC = () => {
 
   return (
     <styled.Container data={data}>
-      <styled.ExitIcon onClick={() => navigate(aboutMe)} />
+      <styled.ExitIconContainer onClick={() => navigate(aboutMe)} >
+        <styled.ExitIcon />
+      </styled.ExitIconContainer>
       {data ? <Fragment>
-        <styled.TextContainer>
-          <styled.LineTitle>Title</styled.LineTitle>
+        <styled.TextContainer title='Title' >
           <styled.Text>{data.title}</styled.Text>
         </styled.TextContainer>
-        <styled.TextContainer>
-          <styled.LineTitle>Director</styled.LineTitle>
+        <styled.TextContainer title='Producer'>
           <styled.Text>{data.producer}</styled.Text>
         </styled.TextContainer>
-        <styled.TextContainer>
-          <styled.LineTitle>Producer</styled.LineTitle>
+        <styled.TextContainer title='Director'>
           <styled.Text>{data.director}</styled.Text>
         </styled.TextContainer>
-        <styled.TextContainer>
-          <styled.LineTitle>Relase Date</styled.LineTitle>
+        <styled.TextContainer title='Relase data'>
           <styled.Text>{data.release_date}</styled.Text>
         </styled.TextContainer>
-        <styled.TextContainer1>
-          <styled.LineTitle>Relase Date</styled.LineTitle>
-          <styled.Text>{data.opening_crawl}</styled.Text>
-        </styled.TextContainer1>
+        <styled.TextContainerBig>
+          <styled.TextBig>{data.opening_crawl}</styled.TextBig>
+        </styled.TextContainerBig>
       </Fragment> : <ReactLoading type='spin' width={100} />}
     </styled.Container>
   )

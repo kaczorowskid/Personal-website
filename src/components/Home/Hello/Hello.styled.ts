@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import mcgowan from '../../../assets/img/mcgowan.jpg';
 import { colorConfig } from "../../../colorsConfig";
+import { device } from "../../../helper/deviceSize";
 
 export const Container = styled.div`
   width: 100%;
@@ -28,4 +29,8 @@ export const Text = styled(motion.div)`
   color: ${colorConfig.darkYellow};
   font-size: 4rem;
   font-family: 'Press Start 2P';
+
+  @media only screen and (${device.laptop}) {
+      font-size: 3rem;
+  }
 `;

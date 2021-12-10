@@ -23,63 +23,91 @@ export const Container = styled.div<{ data?: any }>`
   })}
 
   @media only screen and (${device.laptop}) {
-    width: 90%;
-    height: 140vh;
+    width: 95%;
+    height: 90%;
   }
 `;
 
-export const TextContainer = styled.div`
-  width: 80%;
+export const TextContainer = styled.div<{title: string}>`
+  width: 90%;
   height: 10%;
   border-bottom: 3px dotted ${colorConfig.yellow};
   font-family: 'Press Start 2P';
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  justify-content: flex-end;
+  margin: 20px 0;
+  position: relative;
+
+  @media only screen and (${device.laptop}) {
+    justify-content: flex-end;
+  }
+
+  &::before {
+    content: "${({ title }) => title}";
+    position: absolute;
+    color: ${colorConfig.yellow};
+    bottom: 0px;
+    left: 0;
+
+    @media only screen and (${device.laptop}) {
+      font-size: 0.75rem;
+    }
+
+    @media only screen and (${device.mobileM}) {
+      font-size: 0.6rem;
+    }
+  }
+
 `;
 
 export const Text = styled.span`
   font-family: 'Press Start 2P';
   color: ${colorConfig.yellow};
-  width: 70%;
+  font-size: 0.9rem;
   display: flex;
   justify-content: flex-end;
-  font-size: 0.9rem;
-  text-align: justify;
+  align-items: flex-end;
+  height: 100%;
+  width: 60%;
 
   @media only screen and (${device.laptop}) {
-    width: 60%;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  @media only screen and (${device.mobileM}) {
+    font-size: 0.6rem;
   }
 `;
 
-export const LineTitle = styled.span`
-  font-family: 'Press Start 2P';
-  color: ${colorConfig.yellow};
-  width: 30%;
-  
-  @media only screen and (${device.laptop}) {
-    width: 20%;
-    font-size: 0.8rem;
-  }
-`;
-
-export const TextContainer1 = styled.div`
-  width: 80%;
+export const TextContainerBig = styled.div`
+  width: 90%;
   height: 55%;
-  border-bottom: 3px dotted ${colorConfig.yellow};
+  margin: 10px 0;
   position: relative;
   font-family: 'Press Start 2P';
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const TextBig = styled.span`
+  font-family: 'Press Start 2P';
+  color: ${colorConfig.yellow};
+  font-size: 0.9rem;
+  height: 100%;
+`;
+
+export const ExitIconContainer = styled.div`
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
 `;
 
 export const ExitIcon = styled(Cross)`
   color: ${colorConfig.red};
   position: absolute;
-  width: 60px;
-  height: 60px;
-  right: 0;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
 `;

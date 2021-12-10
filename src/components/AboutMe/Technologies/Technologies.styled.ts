@@ -12,7 +12,12 @@ export const Container = styled.div`
 
   @media only screen and (${device.laptop}) {
       margin: 20px 0;
-      height: 110vh;
+      height: 100vh;
+  }
+
+  @media only screen and (${device.mobileM}) {
+      margin: 20px 0;
+      height: 140vh;
   }
 `;
 
@@ -34,10 +39,11 @@ export const ContentContainer = styled(motion.div)`
   &::before {
     content: 'I know:';
     position: absolute;
+    width: 100%;
     top: -40px;
-    left: 50%;
-    transform: translate(-50%, 0%);
     font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
   }
 
   &::after {
@@ -85,4 +91,14 @@ export const Item = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+
+  @media only screen and (${device.laptop}) {
+    margin: 5px;
+    padding: 7px 7px;
+  }
+
+  @media only screen and (${device.mobileM}) {
+      margin: 5px;
+      padding: 5px 5px;
+  }
 `;
