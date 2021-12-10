@@ -27,7 +27,7 @@ export const ContentContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media only screen and (${device.laptop}) {
+  @media only screen and (${device.tablet}) {
     height: 130vh;
   }
 

@@ -48,6 +48,12 @@ export const ImageConatiner = styled.div`
     height: 30%;
     margin: 10px 0;
   }
+
+  @media only screen and (${device.tablet}) {
+    width: 60%;
+    height: 30%;
+    margin: 10px 0;
+  }
 `;
 
 export const Image = styled.img`

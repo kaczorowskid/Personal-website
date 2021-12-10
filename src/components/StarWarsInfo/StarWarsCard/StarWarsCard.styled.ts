@@ -22,7 +22,7 @@ export const Container = styled.div<{ data?: any }>`
   'justify-content': 'center'
   })}
 
-  @media only screen and (${device.laptop}) {
+  @media only screen and (${device.tablet}) {
     width: 95%;
     height: 90%;
   }

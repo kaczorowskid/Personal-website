@@ -31,7 +31,7 @@ export const ContentContainer = styled(motion.div)`
   border-radius: 20px;
   transform-style: preserve-3d;
 
-  @media only screen and (${device.laptop}) {
+  @media only screen and (${device.tablet}) {
     width: 90%;
     height: 80%;
   }

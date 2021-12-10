@@ -23,7 +23,7 @@ export const CardContainer = styled(motion.div)`
   justify-content: space-evenly;
   align-items: center;
 
-  @media only screen and (${device.laptop}) {
+  @media only screen and (${device.tablet}) {
     width: 90%;
     height: 70%;
     display: block;

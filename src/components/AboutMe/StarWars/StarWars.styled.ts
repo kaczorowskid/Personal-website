@@ -70,6 +70,10 @@ export const StarWarsCardContainer = styled(motion.div)`
   cursor: pointer;
   border-radius: 10px;
 
+  @media only screen and (${device.tablet}) {
+    width: 90%;
+  }
+
   &:hover {
     border: 4px solid ${colorConfig.yellow};
   }
