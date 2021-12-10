@@ -45,7 +45,7 @@ export const CardContainer = styled(motion.div)`
   }
 `;
 
-export const ImageContainer = styled(motion.div)`
+export const ImageContainer = styled.div`
   width: 30%;
   height: 100%;
 
