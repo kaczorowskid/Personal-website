@@ -30,8 +30,8 @@ const Navbar: React.FC= () => {
     <>
       <styled.Container>
         <styled.LogoContainer>OK site</styled.LogoContainer>
-        {/* {!detectMobile.isMobile() ? <styled.RouterButtonContainer> */}
-        {false ? <styled.RouterButtonContainer>
+        {!detectMobile.isMobile() ? <styled.RouterButtonContainer>
+        {/* {false ? <styled.RouterButtonContainer> */}
           <styled.RouterButton btnColor='yellow' onClick={() => navigate(home)} >Home</styled.RouterButton>
           <styled.RouterButton btnColor='white' onClick={() => navigate(aboutMe)} >About</styled.RouterButton>
         </styled.RouterButtonContainer> :
