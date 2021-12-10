@@ -24,6 +24,7 @@ export const CardContainer = styled(motion.div)`
 
   @media only screen and (${device.laptop}) {
     width: 90%;
+    height: 70%;
     display: block;
   }
 

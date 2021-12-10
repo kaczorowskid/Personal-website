@@ -16,6 +16,10 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  
+  @media only screen and (${device.laptop}) {
+    flex-direction: column;
+  }
 `;
 
 export const ImageContainer = styled(motion.div)`
@@ -23,7 +27,8 @@ export const ImageContainer = styled(motion.div)`
   height: 410px;
 
   @media only screen and (${device.laptop}) {
-    display: none;
+    width: 70%;
+    position: absolute;
   }
 `;
 
