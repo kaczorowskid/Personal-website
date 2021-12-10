@@ -18,11 +18,11 @@ export const LogoContainer = styled.div`
   height: 100px;
   display: flex;
   left: 5%;
-  /* justify-content: center; */
   align-items: center;
   font-size: 20px;
   color: yellow;
   font-family: 'Press Start 2P';
+  cursor: pointer;
 `;
 
 export const RouterButtonContainer = styled.div`

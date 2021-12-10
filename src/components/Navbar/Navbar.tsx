@@ -4,7 +4,6 @@ import { config } from '../../config';
 import { useNavigate } from 'react-router';
 import { useIsMobile } from '../../hooks/useIsMobile';
 
-
 const Navbar: React.FC= () => {
 
   const { aboutMe, home } = config.routerPath;
@@ -29,9 +28,8 @@ const Navbar: React.FC= () => {
   return (
     <>
       <styled.Container>
-        <styled.LogoContainer>OK site</styled.LogoContainer>
+        <styled.LogoContainer onClick={() => navigate(home)} >OK site</styled.LogoContainer>
         {!detectMobile.isMobile() ? <styled.RouterButtonContainer>
-        {/* {false ? <styled.RouterButtonContainer> */}
           <styled.RouterButton btnColor='yellow' onClick={() => navigate(home)} >Home</styled.RouterButton>
           <styled.RouterButton btnColor='white' onClick={() => navigate(aboutMe)} >About</styled.RouterButton>
         </styled.RouterButtonContainer> :
