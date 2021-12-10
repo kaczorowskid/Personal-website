@@ -87,6 +87,14 @@ export const Card = styled.div<{ title: string, touch: number }>`
     align-items: center;
     text-align: center;
     font-weight: bold;
+
+    @media only screen and (${device.laptop}) {
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (${device.mobileM}) {
+      font-size: 0.8rem;
+    }
   }
 
   &:hover::after {
