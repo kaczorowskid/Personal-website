@@ -17,11 +17,10 @@ export const getOneMovie = createAsyncThunk('movies/getOneMovie', async (movieId
   return response
 })
 
-const initialState = moviesStateMock;
 
 const moviesReducer = createSlice({
   name: 'movies',
-  initialState: initialState,
+  initialState: moviesStateMock,
   reducers: {},
   extraReducers: (builder: ActionReducerMapBuilder<Istate>) => {
     builder.addCase(getAllMovies.fulfilled, (state: Istate, { payload }: PayloadAction<IMovies>) => {

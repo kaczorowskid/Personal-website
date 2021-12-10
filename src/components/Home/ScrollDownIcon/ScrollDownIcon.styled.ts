@@ -34,8 +34,8 @@ export const ScrollDown = styled.div`
 `;
 
 export const SVGContainer = styled.svg``;
-  
-export const ScrollDownPoint = styled.circle<{isSecond?: boolean}>`
+
+export const ScrollDownPoint = styled.circle<{ isSecond?: boolean }>`
   animation-duration: 1.5s;
   animation-delay: ${({ isSecond }) => isSecond && '0.75s'};
 	animation-name: ${scrollDownAnim};

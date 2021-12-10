@@ -108,6 +108,7 @@ export const CardTitleContainer = styled.div`
   align-items: center;
   font-weight: bold;
 `;
+
 export const CardContentContainer = styled.div`
   width: 100%;
   height: 100%;

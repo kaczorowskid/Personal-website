@@ -57,7 +57,6 @@ export const TextContainer = styled.div<{title: string}>`
       font-size: 0.6rem;
     }
   }
-
 `;
 
 export const Text = styled.span`

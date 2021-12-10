@@ -93,4 +93,3 @@ export const Text = styled.span`
   font-size: 30px;
   color: ${colorConfig.black};
 `;
-

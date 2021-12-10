@@ -35,8 +35,8 @@ export const RouterButtonContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const RouterButton = styled.div<{btnColor: string}>`
-  color: ${({btnColor}) => btnColor};
+export const RouterButton = styled.div<{ btnColor: string }>`
+  color: ${({ btnColor }) => btnColor};
   font-size: 22px;
   font-family: 'Press Start 2P';
   cursor: pointer;

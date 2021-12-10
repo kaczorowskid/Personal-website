@@ -4,7 +4,7 @@ import { config } from '../../config';
 import { useNavigate } from 'react-router';
 import { useIsMobile } from '../../hooks/useIsMobile';
 
-const Navbar: React.FC= () => {
+const Navbar: React.FC = () => {
 
   const { aboutMe, home } = config.routerPath;
   const navigate = useNavigate();
