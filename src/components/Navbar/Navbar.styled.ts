@@ -42,7 +42,7 @@ export const RouterButton = styled.div<{btnColor: string}>`
   border-bottom: 4px solid transparent ;
 
   &:hover {
-      border-bottom: 4px solid ${colorConfig.white} ;
+      border-bottom: 4px solid ${colorConfig.white};
   }
 `;
 
