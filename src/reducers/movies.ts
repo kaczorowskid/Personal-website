@@ -26,7 +26,13 @@ const moviesReducer = createSlice({
   extraReducers: (builder: ActionReducerMapBuilder<Istate>) => {
     builder.addCase(getAllMovies.fulfilled, (state: Istate, { payload }: PayloadAction<IMovies>) => {
       state.dataAll = payload
-      state.dataOne = undefined
+      state.dataOne = {
+        title: '',
+        opening_crawl: '',
+        director: '',
+        producer: '',
+        release_date: ''
+      }
     });
     builder.addCase(getAllMovies.rejected, () => {
       console.error("Any error to get all data");
