@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { device } from "../../../helper/deviceSize";
+import { colorConfig } from "../../../colorsConfig";
 
 export const Container = styled.div`
   width: 100%;
@@ -14,7 +15,7 @@ export const Container = styled.div`
 export const CardContainer = styled(motion.div)`
   width: 1000px;
   height: 500px;
-  border: 5px solid black;
+  border: 5px solid ${colorConfig.black};
   border-radius: 5px;
   position: relative;
   transform-style: preserve-3d;
@@ -32,7 +33,7 @@ export const CardContainer = styled(motion.div)`
     content: "";
     width: 100%;
     height: 100%;
-    background: #EDD9D9;
+    background: ${colorConfig.lightPink};
     top: 30px;
     left: 30px;
     position: absolute;
