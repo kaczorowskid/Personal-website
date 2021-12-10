@@ -12,7 +12,7 @@ const Home: React.FC = () => {
       <Navbar />
       <Hello />
       <Device />
-      {/* <End /> */}
+      <End />
       <Footer />
     </>
   )

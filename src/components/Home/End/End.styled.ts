@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../helper/deviceSize";
 
 export const Container = styled.div`
     position: relative;
@@ -8,6 +9,10 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (${device.laptop}) {
+        height: 120vh;
+    }
 `;
 
 export const CardsContainer = styled.div`
@@ -17,6 +22,12 @@ export const CardsContainer = styled.div`
     align-items: center;
     justify-content: space-evenly;
     position: relative;
+
+    @media only screen and (${device.laptop}) {
+        width: 90%;
+        height: 100vh;
+        flex-direction: column;
+    }
 
     &::before {
         content: "Did you know that?";
@@ -37,6 +48,11 @@ export const Card = styled.div<{title: string}>`
     background: #f2f2f2;
     border-radius: 20px;
     cursor: pointer;
+    
+    @media only screen and (${device.laptop}) {
+        height: 30%;
+        width: 100%;
+    }
 
     &::before {
         content: "";
@@ -94,4 +110,8 @@ export const CardContentContainer = styled.div`
 
 export const Text = styled.span`
     font-size: 1rem;
+
+    @media only screen and (${device.laptop}) {
+        font-size: 0.8rem;
+    }
 `;
