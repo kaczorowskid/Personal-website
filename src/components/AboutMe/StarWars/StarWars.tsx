@@ -20,7 +20,7 @@ const StarWars: React.FC = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{
-              ...(i % 2 == 1) && { delay: 0.5 },
+              ...(i % 2 === 1) && { delay: 0.5 },
               duration: 1
             }}
             key={i} >

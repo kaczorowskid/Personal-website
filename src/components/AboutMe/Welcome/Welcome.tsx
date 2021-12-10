@@ -26,7 +26,7 @@ const Welcome: React.FC = () => {
                   animate='animation'
                   variants={textVariants}
                   onAnimationComplete={() => {
-                    i == array.length - 1 && setHelloIsEnd(true)
+                    i === array.length - 1 && setHelloIsEnd(true)
                   }}
                 >
                   {item === " " ? <span>&nbsp;</span> : item}

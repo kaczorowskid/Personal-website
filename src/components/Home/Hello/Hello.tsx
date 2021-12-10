@@ -1,6 +1,5 @@
 import React from 'react';
 import * as styled from './Hello.styled';
-import { motion } from 'framer-motion';
 import { useScrollValue } from '../../../hooks/useScrollValue';
 import ScrollDownIcon from '../ScrollDownIcon/ScrollDownIcon';
 
