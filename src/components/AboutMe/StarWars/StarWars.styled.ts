@@ -38,6 +38,8 @@ export const CardsContainer = styled.div`
     left: 30px;
     position: absolute;
     z-index: -1;
+    border-radius: 20px;
+
 
     @media only screen and (${device.laptop}) {
       top: 20px;
