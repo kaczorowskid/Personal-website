@@ -1,12 +1,13 @@
 import styled, { keyframes } from "styled-components";
 import { device } from "../../../helper/deviceSize";
+import { colorConfig } from "../../../colorsConfig";
 
 export const Container = styled.div`
 position: fixed;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: black;
+  background: ${colorConfig.black};
 `;
 
 const animStar = keyframes`
