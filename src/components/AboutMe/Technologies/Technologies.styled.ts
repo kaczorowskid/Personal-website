@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { device } from "../../../helper/deviceSize";
+import { colorConfig } from "../../../colorsConfig";
 
 export const Container = styled.div`
   width: 100%;
@@ -17,7 +18,7 @@ export const Container = styled.div`
 export const ContentContainer = styled(motion.div)`
   width: 850px;
   height: 500px;
-  border: 5px solid black;
+  border: 5px solid ${colorConfig.black};
   display: flex;
   flex-direction: column;
   position: relative;
@@ -34,7 +35,7 @@ export const ContentContainer = styled(motion.div)`
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #b0b0b0;
+    background: ${colorConfig.gray};
     top: 30px;
     left: -30px;
     border-radius: 20px;
@@ -69,7 +70,7 @@ export const ItemsContainer = styled.div`
 export const Item = styled.div`
   margin: 5px;
   padding: 10px 10px;
-  background: #e0e0e0;
+  background: ${colorConfig.lightGray};
   display: inline-flex;
   justify-content: center;
   align-items: center;

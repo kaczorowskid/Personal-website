@@ -7,6 +7,7 @@ export const colorConfig = {
     lightPink: '#edd9d9',
     lighterPink: '#f2f2f2',
     pink: '#f1b9b9',
+    lightGray: '#e0e0e0',
     gray: '#b0b0b0',
     red: '#ff0000',
     black: '#000000',
