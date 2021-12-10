@@ -1,11 +1,8 @@
 import styled from "styled-components";
 import { Cross } from '@styled-icons/entypo';
+import { device } from "../../../helper/deviceSize";
 
 export const Container = styled.div<{ data?: any }>`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 1000px;
   height: 700px;
   border: 5px solid white;
@@ -14,13 +11,21 @@ export const Container = styled.div<{ data?: any }>`
   box-shadow: 8px 10px 8px 0px rgba(255, 255, 255, 0.5);
   display: flex;
 
-  ${({ data }) => data ? ({
+  /* ${({ data }) => data ? ({
   'flex-direction': 'column',
   'align-items': 'center'
   }) : ({
   'align-items': 'cente',
   'justify-content': 'center'
-  })}
+  })} */
+
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (${device.laptop}) {
+    width: 90%;
+    height: 150vh;
+  }
 `;
 
 export const TextContainer = styled.div`

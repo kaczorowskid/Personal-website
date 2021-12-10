@@ -5,6 +5,9 @@ export const Container = styled.div`
   height: 100vh;
   overflow: hidden;
   background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const animStar = keyframes`
