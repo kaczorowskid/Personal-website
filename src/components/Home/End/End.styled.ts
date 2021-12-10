@@ -39,7 +39,7 @@ export const CardsContainer = styled.div`
     }
 `;
 
-export const Card = styled.div<{title: string}>`
+export const Card = styled.div<{title: string, touch: number}>`
     width: 30%;
     height: 90%;
     border: 3px solid #d6d4f2;
@@ -86,6 +86,10 @@ export const Card = styled.div<{title: string}>`
     &:hover::after {
         opacity: 0;
         transition: all 1s;
+    }
+
+    &:nth-child(${({ touch }) => touch })::after {
+        opacity: 0;
     }
 `;
 
