@@ -7,8 +7,8 @@ const Technologies: React.FC = () => {
     return (
         <styled.Container>
             <styled.ContentContainer
-                initial={{ x: window.screen.width / 2 }}
-                whileInView={{ x: 0 }}
+                initial={{  scale: 0 }}
+                whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{
                     duration: 1

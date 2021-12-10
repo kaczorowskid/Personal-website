@@ -10,21 +10,19 @@ export const Container = styled.div<{ data?: any }>`
   -moz-box-shadow: 8px 10px 8px 0px rgba(255, 255, 255, 0.5);
   box-shadow: 8px 10px 8px 0px rgba(255, 255, 255, 0.5);
   display: flex;
+  position: relative;
 
-  /* ${({ data }) => data ? ({
+  ${({ data }) => data ? ({
   'flex-direction': 'column',
   'align-items': 'center'
   }) : ({
   'align-items': 'cente',
   'justify-content': 'center'
-  })} */
-
-  flex-direction: column;
-  align-items: center;
+  })}
 
   @media only screen and (${device.laptop}) {
     width: 90%;
-    height: 150vh;
+    height: 140vh;
   }
 `;
 
@@ -35,6 +33,7 @@ export const TextContainer = styled.div`
   font-family: 'Press Start 2P';
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
 `;
 
 export const Text = styled.span`
@@ -45,12 +44,22 @@ export const Text = styled.span`
   justify-content: flex-end;
   font-size: 0.9rem;
   text-align: justify;
+
+  @media only screen and (${device.laptop}) {
+    width: 65%;
+    font-size: 0.8rem;
+  }
 `;
 
 export const LineTitle = styled.span`
   font-family: 'Press Start 2P';
   color: yellow;
   width: 30%;
+  
+  @media only screen and (${device.laptop}) {
+    width: 20%;
+    font-size: 0.8rem;
+  }
 `;
 
 export const TextContainer1 = styled.div`

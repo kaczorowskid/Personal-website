@@ -1,13 +1,12 @@
 import styled, { keyframes } from "styled-components";
+import { device } from "../../../helper/deviceSize";
 
 export const Container = styled.div`
+position: fixed;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 const animStar = keyframes`
@@ -17,6 +16,18 @@ const animStar = keyframes`
 
   to {
     transform: translateY(-2000px);
+  }
+`;
+
+export const ContentContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (${device.laptop}) {
+    height: 150vh;
   }
 `;
 
