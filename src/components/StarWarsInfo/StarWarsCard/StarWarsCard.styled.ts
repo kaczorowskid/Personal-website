@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { Cross } from '@styled-icons/entypo';
 import { device } from "../../../helper/deviceSize";
+import { colorConfig } from "../../../colorsConfig";
 
 export const Container = styled.div<{ data?: any }>`
   width: 1000px;
   height: 700px;
-  border: 5px solid white;
+  border: 5px solid ${colorConfig.white};
   border-radius: 10px;
   -webkit-box-shadow: 8px 10px 8px 0px rgba(255, 255, 255, 0.5);
   -moz-box-shadow: 8px 10px 8px 0px rgba(255, 255, 255, 0.5);
@@ -30,7 +31,7 @@ export const Container = styled.div<{ data?: any }>`
 export const TextContainer = styled.div`
   width: 80%;
   height: 10%;
-  border-bottom: 3px dotted yellow;
+  border-bottom: 3px dotted ${colorConfig.yellow};
   font-family: 'Press Start 2P';
   display: flex;
   align-items: flex-end;
@@ -39,7 +40,7 @@ export const TextContainer = styled.div`
 
 export const Text = styled.span`
   font-family: 'Press Start 2P';
-  color: yellow;
+  color: ${colorConfig.yellow};
   width: 70%;
   display: flex;
   justify-content: flex-end;
@@ -54,7 +55,7 @@ export const Text = styled.span`
 
 export const LineTitle = styled.span`
   font-family: 'Press Start 2P';
-  color: yellow;
+  color: ${colorConfig.yellow};
   width: 30%;
   
   @media only screen and (${device.laptop}) {
@@ -66,7 +67,7 @@ export const LineTitle = styled.span`
 export const TextContainer1 = styled.div`
   width: 80%;
   height: 55%;
-  border-bottom: 3px dotted yellow;
+  border-bottom: 3px dotted ${colorConfig.yellow};
   position: relative;
   font-family: 'Press Start 2P';
   display: flex;
@@ -75,7 +76,7 @@ export const TextContainer1 = styled.div`
 `;
 
 export const ExitIcon = styled(Cross)`
-  color: red;
+  color: ${colorConfig.red};
   position: absolute;
   width: 60px;
   height: 60px;
