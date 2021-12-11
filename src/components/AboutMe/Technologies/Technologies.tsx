@@ -14,7 +14,7 @@ const Technologies: React.FC = () => {
           duration: 1
         }}
       >
-        {Object.entries(technologiesList).map(([key, value]: [key: string, value: string[]], i: number) => (
+        {Object.entries(technologiesList).map(([key, value]: [key: string, value: Array<string>], i: number) => (
           <Fragment key={i}>
             <styled.Title>{key}</styled.Title>
             <styled.ItemsContainer>
