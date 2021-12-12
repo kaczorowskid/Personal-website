@@ -8,13 +8,11 @@ import { Istate, moviesStateMock } from "./stateMock/moviesStateMock";
 const { moviesApiPath } = config.requestsPath
 
 export const getAllMovies = createAsyncThunk("movies/getAllMovies", async () => {
-  const response = await callApi<IMovies>(moviesApiPath)
-  return response
+  return await callApi<IMovies>(moviesApiPath)
 });
 
 export const getOneMovie = createAsyncThunk('movies/getOneMovie', async (movieId: number) => {
-  const response = await callApi<IMovie>(`${moviesApiPath}/${movieId}`)
-  return response
+  return await callApi<IMovie>(`${moviesApiPath}/${movieId}`)
 })
 
 
