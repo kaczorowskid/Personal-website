@@ -12,9 +12,9 @@ const StarWars: React.FC = () => {
 
   return (
     <>
-      {data.length !== 0 && <styled.Container>
+      <styled.Container>
         <styled.CardsContainer>
-          {data ? data.map((item: any, i: number) => (
+          {data[0].title !== '' ? data.map((item: any, i: number) => (
             <styled.StarWarsCardContainer
               onClick={() => navigate(`/movie/${urlParser(item.url)}`)}
               initial={{ opacity: 0 }}
@@ -35,7 +35,7 @@ const StarWars: React.FC = () => {
             </styled.StarWarsCardContainer>
           )) : <ReactLoading type='spin' width={100} height={100} color='black' />}
         </styled.CardsContainer>
-      </styled.Container>}
+      </styled.Container>
     </>
   )
 }
