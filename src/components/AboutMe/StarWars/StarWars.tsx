@@ -13,14 +13,14 @@ const StarWars: React.FC = () => {
   return (
     <styled.Container>
       <styled.CardsContainer>
-        {data ? data.map((item: any, i: number) => (
+        {data.length == 0 ? data.map((item: any, i: number) => (
           <styled.StarWarsCardContainer
             onClick={() => navigate(`/movie/${urlParser(item.url)}`)}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{
-              ...(i % 2 === 1) && { delay: 0.5 },
+              ...(i % 2 !== 0) && { delay: 0.5 },
               duration: 1
             }}
             key={i} >
