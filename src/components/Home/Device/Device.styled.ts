@@ -66,7 +66,6 @@ export const Mask = styled.div`
     background-size: 40.5% 40%;
     background-position: 50% 0;
 
-
     @media only screen and (${device.laptop}) {
       background-size: 90.5% 40%;
     }
