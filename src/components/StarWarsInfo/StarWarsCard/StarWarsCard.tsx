@@ -7,15 +7,13 @@ import { useMovieData } from '../../../hooks/useMovieData';
 import { useDispatch } from 'react-redux';
 import { getOneMovie } from '../../../reducers/movies';
 import { useNavigate } from 'react-router';
-import { useLoadingStatus } from '../../../hooks/useLoadingStatus';
 
 const StarWarsCard: React.FC = () => {
 
   const { id } = useParams();
-  const { data } = useMovieData();
+  const { dataOneMovie, loading } = useMovieData();
   const dispatch = useDispatch();
   const navigate = useNavigate()
-  const { loading } = useLoadingStatus();
 
   const { aboutMe } = config.routerPath;
 
@@ -24,25 +22,25 @@ const StarWarsCard: React.FC = () => {
   }, [])
 
   return (
-    <styled.Container data={data}>
+    <styled.Container data={dataOneMovie}>
       <styled.ExitIconContainer onClick={() => navigate(aboutMe)} >
         <styled.ExitIcon />
       </styled.ExitIconContainer>
       {!loading ? <Fragment>
         <styled.TextContainer title='Title' >
-          <styled.Text>{data.title}</styled.Text>
+          <styled.Text>{dataOneMovie.title}</styled.Text>
         </styled.TextContainer>
         <styled.TextContainer title='Producer'>
-          <styled.Text>{data.producer}</styled.Text>
+          <styled.Text>{dataOneMovie.producer}</styled.Text>
         </styled.TextContainer>
         <styled.TextContainer title='Director'>
-          <styled.Text>{data.director}</styled.Text>
+          <styled.Text>{dataOneMovie.director}</styled.Text>
         </styled.TextContainer>
         <styled.TextContainer title='Relase data'>
-          <styled.Text>{data.release_date}</styled.Text>
+          <styled.Text>{dataOneMovie.release_date}</styled.Text>
         </styled.TextContainer>
         <styled.TextContainerBig>
-          <styled.TextBig>{data.opening_crawl}</styled.TextBig>
+          <styled.TextBig>{dataOneMovie.opening_crawl}</styled.TextBig>
         </styled.TextContainerBig>
       </Fragment> :
         <styled.LoadingContainer >
