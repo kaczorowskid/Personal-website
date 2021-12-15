@@ -3,6 +3,7 @@ import * as styled from './Hello.styled';
 import { useScrollValue } from '../../../hooks/useScrollValue';
 import ScrollDownIcon from '../ScrollDownIcon/ScrollDownIcon';
 import { randomNumber } from '../../../helper/randomNumber';
+
 const Hello: React.FC = () => {
 
   const { scrollValue } = useScrollValue();

@@ -4,17 +4,19 @@ import ReactLoading from "react-loading";
 import { useAllMoviesData } from '../../../hooks/useAllMoviesData';
 import { urlParser } from '../../../helper/urlParser';
 import { useNavigate } from "react-router-dom";
+import { useLoadingStatus } from '../../../hooks/useLoadingStatus';
 
 const StarWars: React.FC = () => {
 
   const { data } = useAllMoviesData();
+  const { loading } = useLoadingStatus();
   const navigate = useNavigate()
 
   return (
     <>
       <styled.Container>
         <styled.CardsContainer>
-          {data[0].title !== '' ? data.map((item: any, i: number) => (
+          {!loading ? data.map((item: any, i: number) => (
             <styled.StarWarsCardContainer
               onClick={() => navigate(`/movie/${urlParser(item.url)}`)}
               initial={{ opacity: 0 }}

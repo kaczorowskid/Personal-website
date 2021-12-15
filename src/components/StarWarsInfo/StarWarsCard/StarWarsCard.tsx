@@ -7,6 +7,7 @@ import { useMovieData } from '../../../hooks/useMovieData';
 import { useDispatch } from 'react-redux';
 import { getOneMovie } from '../../../reducers/movies';
 import { useNavigate } from 'react-router';
+import { useLoadingStatus } from '../../../hooks/useLoadingStatus';
 
 const StarWarsCard: React.FC = () => {
 
@@ -14,6 +15,7 @@ const StarWarsCard: React.FC = () => {
   const { data } = useMovieData();
   const dispatch = useDispatch();
   const navigate = useNavigate()
+  const { loading } = useLoadingStatus();
 
   const { aboutMe } = config.routerPath;
 
@@ -26,7 +28,7 @@ const StarWarsCard: React.FC = () => {
       <styled.ExitIconContainer onClick={() => navigate(aboutMe)} >
         <styled.ExitIcon />
       </styled.ExitIconContainer>
-      {data ? <Fragment>
+      {!loading ? <Fragment>
         <styled.TextContainer title='Title' >
           <styled.Text>{data.title}</styled.Text>
         </styled.TextContainer>
@@ -42,7 +44,11 @@ const StarWarsCard: React.FC = () => {
         <styled.TextContainerBig>
           <styled.TextBig>{data.opening_crawl}</styled.TextBig>
         </styled.TextContainerBig>
-      </Fragment> : <ReactLoading type='spin' width={100} />}
+      </Fragment> :
+        <styled.LoadingContainer >
+          <ReactLoading type='spin' width={100} />
+        </styled.LoadingContainer>}
+
     </styled.Container>
   )
 }

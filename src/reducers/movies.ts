@@ -21,7 +21,11 @@ const moviesReducer = createSlice({
   initialState: moviesStateMock,
   reducers: {},
   extraReducers: (builder: ActionReducerMapBuilder<Istate>) => {
+    builder.addCase(getAllMovies.pending, (state: Istate) => {
+      state.loading = true
+    });
     builder.addCase(getAllMovies.fulfilled, (state: Istate, { payload }: PayloadAction<IMovies>) => {
+      state.loading = false
       state.dataAll = payload
       state.dataOne = {
         title: '',
@@ -34,7 +38,11 @@ const moviesReducer = createSlice({
     builder.addCase(getAllMovies.rejected, () => {
       console.error("Any error to get all data");
     });
+    builder.addCase(getOneMovie.pending, (state: Istate) => {
+      state.loading = true
+    });
     builder.addCase(getOneMovie.fulfilled, (state: Istate, { payload }: PayloadAction<IMovie>) => {
+      state.loading = false
       state.dataOne = payload
     });
     builder.addCase(getOneMovie.rejected, () => {

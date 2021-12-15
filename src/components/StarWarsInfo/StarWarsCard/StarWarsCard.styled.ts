@@ -110,3 +110,11 @@ export const ExitIcon = styled(Cross)`
   width: 100%;
   height: 100%;
 `;
+
+export const LoadingContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
