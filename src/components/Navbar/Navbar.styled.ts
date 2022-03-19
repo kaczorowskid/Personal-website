@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { colorConfig } from "../../colorsConfig";
+import { colorConfig } from '@styles';
 
 export const Container = styled.div`
   position: fixed;

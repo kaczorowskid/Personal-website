@@ -1,0 +1,73 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@app/*": [
+        "app/*"
+      ],
+      "@app": [
+        "app/index"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@assets": [
+        "assets/index"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@components": [
+        "components/index"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@config": [
+        "config/index"
+      ],
+      "@helper/*": [
+        "helper/*"
+      ],
+      "@helper": [
+        "helper/index"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@hooks": [
+        "hooks/index"
+      ],
+      "@reducers/*": [
+        "reducers/*"
+      ],
+      "@reducers": [
+        "reducers/index"
+      ],
+      "@routes/*": [
+        "routes/*"
+      ],
+      "@routes": [
+        "routes/index"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@styles": [
+        "styles/index"
+      ],
+      "@types/*": [
+        "types/*"
+      ],
+      "@types": [
+        "types/index"
+      ],
+      "@views/*": [
+        "views/*"
+      ],
+      "@views": [
+        "views/index"
+      ]
+    }
+  }
+}

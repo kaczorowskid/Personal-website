@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from 'framer-motion';
-import { device } from "../../../helper/deviceSize";
+import { device } from '@helper';
 
 export const Wrapper = styled.div`
   width: 100%;

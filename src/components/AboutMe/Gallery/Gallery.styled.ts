@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { device } from "../../../helper/deviceSize";
-import { colorConfig } from "../../../colorsConfig";
+import { device } from '@helper';
+// import { colorConfig } from "../../../styles/colorsConfig";
+import { colorConfig } from '@styles';
 
 export const Container = styled.div`
   width: 100%;

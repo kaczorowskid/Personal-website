@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import stopka from '../../../assets/img/stopka.png';
-import { device } from "../../../helper/deviceSize";
-import { colorConfig } from "../../../colorsConfig";
+import { stopka } from '@assets/img';
+import { device } from '@helper';
+import { colorConfig } from '@styles';
 
 export const Container = styled.div`
   top: 0;

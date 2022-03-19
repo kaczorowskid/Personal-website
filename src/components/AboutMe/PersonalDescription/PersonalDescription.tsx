@@ -1,6 +1,6 @@
 import React from 'react';
 import * as styled from './PersonalDescription.styled';
-import face from '../../../assets/img/face.svg';
+import { face } from '@assets/img';
 
 const PersonalDescription: React.FC = () => {
   return (

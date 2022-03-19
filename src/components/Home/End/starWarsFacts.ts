@@ -1,4 +1,4 @@
-import { IFacts } from "../../../types/IFacts";
+import { IFacts } from '@types';
 
 export const starWarsFacts: Array<IFacts> = [
   {

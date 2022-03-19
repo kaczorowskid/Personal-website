@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { RootState } from '../app/store';
+import { RootState } from '@app';
 
 export const useMovieData = () => {
   const dataOneMovie = useSelector((state: RootState) => state?.movies.dataOne)

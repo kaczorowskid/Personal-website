@@ -1,0 +1,1 @@
+export { default as PersonalDescription } from './PersonalDescription';

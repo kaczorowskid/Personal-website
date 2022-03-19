@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import * as styled from './Navbar.styled';
-import { config } from '../../config';
+import { config } from '@config';
 import { useNavigate } from 'react-router';
-import { useIsMobile } from '../../hooks/useIsMobile';
+import { useIsMobile } from '@hooks'
 
 const Navbar: React.FC = () => {
 

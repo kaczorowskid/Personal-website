@@ -1,5 +1,4 @@
-import { IMovie } from "../../types/IMovie";
-import { IMovies } from "../../types/IMovies";
+import { IMovie, IMovies } from '@types'
 
 export interface Istate {
   loading: boolean,
@@ -7,8 +6,8 @@ export interface Istate {
   dataOne: IMovie;
 }
 
-export const moviesStateMock: Istate = {
-  loading: true, 
+export const movieInitialValue: Istate = {
+  loading: true,
   dataAll: {
     results: [
       {

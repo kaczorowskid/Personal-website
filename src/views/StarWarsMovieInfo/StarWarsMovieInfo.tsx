@@ -1,6 +1,5 @@
 import React from 'react';
-import Stars from '../../components/StarWarsInfo/Stars/Stars';
-import StarWarsCard from '../../components/StarWarsInfo/StarWarsCard/StarWarsCard';
+import { Stars, StarWarsCard } from '@components/StarWarsInfo'
 
 const StarWarsMovieInfo: React.FC = () => {
   return (

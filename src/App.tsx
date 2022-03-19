@@ -1,6 +1,4 @@
-import React from 'react';
-import AppRouting from './routes/AppRouting';
-import { routesMap } from './routes/routesMap';
+import { AppRouting, routesMap } from '@routes';
 
 const App = () => <AppRouting routes={routesMap} />
 

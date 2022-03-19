@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { colorConfig } from "../../../colorsConfig";
+import { colorConfig } from '@styles';
 
 const scrollDownAnim = keyframes`
 	0% {

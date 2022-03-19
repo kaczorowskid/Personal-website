@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styled from './Device.styled';
-import site from '../../../assets/img/stronka.png'
-import { useScrollValue } from '../../../hooks/useScrollValue';
+import { site } from '@assets/img';
+import { useScrollValue } from '@hooks';
 
 const Device: React.FC = () => {
 

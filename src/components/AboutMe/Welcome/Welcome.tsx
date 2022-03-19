@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as styled from './Welcome.styled';
-import programist from '../../../assets/img/pragramist.png';
+import { pragramist } from '@assets/img';
 import { imageVariant, textVariants } from './animations';
 
 const Welcome: React.FC = () => {
@@ -13,7 +13,7 @@ const Welcome: React.FC = () => {
         <styled.ImageContainer
           {...imageVariant}
         >
-          <img style={{ width: '100%', height: '100%' }} src={programist} alt="programist" />
+          <img style={{ width: '100%', height: '100%' }} src={pragramist} alt="programist" />
         </styled.ImageContainer>
         <styled.ContentContainer>
           <styled.MyWelcomeContainer>

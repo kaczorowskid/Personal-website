@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import stars from '../../../assets/img/stars.svg';
-import { device } from "../../../helper/deviceSize";
-import { colorConfig } from "../../../colorsConfig";
+import { stars } from '@assets/img';
+import { device } from '@helper';
+import { colorConfig } from '@styles';
 
 export const Container = styled.div`
   margin-top: 40px;

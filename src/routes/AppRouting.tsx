@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
-import { IRouting } from '../types/IRouting';
-import ScrollToTop from './ScrollToTop';
+import { IRouting } from '@types';
+import { ScrollToTop } from '@routes';
 
 interface Props {
   routes: Array<IRouting>

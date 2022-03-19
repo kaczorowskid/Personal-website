@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect } from 'react';
 import * as styled from './StarWarsCard.styled';
 import ReactLoading from "react-loading";
-import { config } from '../../../config';
+import { config } from '@config';
 import { useParams } from 'react-router-dom';
-import { useMovieData } from '../../../hooks/useMovieData';
+import { useMovieData } from '@hooks';
 import { useDispatch } from 'react-redux';
 import { getOneMovie } from '../../../reducers/movies';
 import { useNavigate } from 'react-router';

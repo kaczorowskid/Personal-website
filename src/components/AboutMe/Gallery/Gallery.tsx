@@ -1,8 +1,6 @@
 import React from 'react';
 import * as styled from './Gallery.styled';
-import kotel from '../../../assets/img/kotel.png'
-import piesel from '../../../assets/img/piesel.jpg'
-import pieselwut from '../../../assets/img/pieselwut.png'
+import { kotel, piesel, pieselwut } from '@assets/img';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IFacts } from '../../../types/IFacts';
+import { IFacts } from '@types';
 import * as styled from './End.styled';
 import { starWarsFacts } from './starWarsFacts';
 

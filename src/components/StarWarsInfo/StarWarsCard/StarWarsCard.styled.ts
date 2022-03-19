@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Cross } from '@styled-icons/entypo';
-import { device } from "../../../helper/deviceSize";
-import { colorConfig } from "../../../colorsConfig";
+import { device } from '@helper';
+import { colorConfig } from '@styles';
 
 export const Container = styled.div<{ data?: any }>`
   width: 1000px;
@@ -15,11 +15,11 @@ export const Container = styled.div<{ data?: any }>`
   position: relative;
 
   ${({ data }) => data ? ({
-  'flex-direction': 'column',
-  'align-items': 'center'
+    'flex-direction': 'column',
+    'align-items': 'center'
   }) : ({
-  'align-items': 'cente',
-  'justify-content': 'center'
+    'align-items': 'cente',
+    'justify-content': 'center'
   })}
 
   @media only screen and (${device.tablet}) {
@@ -28,7 +28,7 @@ export const Container = styled.div<{ data?: any }>`
   }
 `;
 
-export const TextContainer = styled.div<{title: string}>`
+export const TextContainer = styled.div<{ title: string }>`
   width: 90%;
   height: 10%;
   border-bottom: 3px dotted ${colorConfig.yellow};

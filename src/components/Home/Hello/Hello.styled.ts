@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import mcgowan from '../../../assets/img/mcgowan.jpg';
-import { colorConfig } from "../../../colorsConfig";
-import { device } from "../../../helper/deviceSize";
+import { mcgowan } from '@assets/img';
+import { colorConfig } from '@styles';
+import { device } from '@helper';
 
 export const Container = styled.div`
   width: 100%;
@@ -18,11 +18,11 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const TextContainer = styled.div<{pos?: number}>`
+export const TextContainer = styled.div<{ pos?: number }>`
   position: relative;
   display: flex;
   text-align: center;
-  top: calc(-${({ pos}) => (pos! / window.screen.height) * 30}%);
+  top: calc(-${({ pos }) => (pos! / window.screen.height) * 30}%);
 `;
 
 export const Text = styled(motion.div)`

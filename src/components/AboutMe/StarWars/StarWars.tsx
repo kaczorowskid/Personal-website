@@ -1,9 +1,9 @@
 import React from 'react';
 import * as styled from './StarWars.styled';
 import ReactLoading from "react-loading";
-import { urlParser } from '../../../helper/urlParser';
+import { urlParser } from '@helper';
 import { useNavigate } from "react-router-dom";
-import { useMovieData } from '../../../hooks/useMovieData';
+import { useMovieData } from '@hooks'
 
 const StarWars: React.FC = () => {
 

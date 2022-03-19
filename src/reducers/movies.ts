@@ -1,9 +1,8 @@
 import { ActionReducerMapBuilder, createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { config } from "../config";
-import { callApi } from "../helper/callApi";
-import { IMovie } from "../types/IMovie";
-import { IMovies } from "../types/IMovies";
-import { Istate, moviesStateMock } from "./stateMock/moviesStateMock";
+import { config } from '@config';
+import { callApi } from '@helper';
+import { IMovie, IMovies } from '@types';
+import { Istate, movieInitialValue } from "./initialValue";
 
 const { moviesApiPath } = config.requestsPath
 
@@ -15,10 +14,9 @@ export const getOneMovie = createAsyncThunk('movies/getOneMovie', async (movieId
   return await callApi<IMovie>(`${moviesApiPath}/${movieId}`)
 })
 
-
-const moviesReducer = createSlice({
+export const moviesReducer = createSlice({
   name: 'movies',
-  initialState: moviesStateMock,
+  initialState: movieInitialValue,
   reducers: {},
   extraReducers: (builder: ActionReducerMapBuilder<Istate>) => {
     builder.addCase(getAllMovies.pending, (state: Istate) => {
@@ -51,5 +49,5 @@ const moviesReducer = createSlice({
   }
 })
 
-export default moviesReducer.reducer;
+// export moviesReducer.reducer;
 

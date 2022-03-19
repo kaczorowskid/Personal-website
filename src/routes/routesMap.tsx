@@ -1,8 +1,6 @@
-import { IRouting } from "../types/IRouting";
-import AboutMe from "../views/AboutMe/AboutMe";
-import Home from "../views/Home/Home";
-import StarWarsMovieInfo from "../views/StarWarsMovieInfo/StarWarsMovieInfo";
-import { config } from "../config";
+import { IRouting } from '@types';
+import { AboutMe, Home, StarWarsMovieInfo } from '@views';
+import { config } from '@config';
 
 const { home, aboutMe, movie } = config.routerPath;
 
