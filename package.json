@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.4.3",
     "@reduxjs/toolkit": "^1.6.2",
     "@styled-icons/entypo": "^10.34.0",
     "@testing-library/jest-dom": "^5.15.1",
@@ -50,7 +49,7 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.15",
-    "react-app-rewired": "^2.1.8"
+    "@craco/craco": "^6.4.3",
+    "@types/styled-components": "^5.1.15"
   }
 }
