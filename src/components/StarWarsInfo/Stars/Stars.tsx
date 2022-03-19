@@ -1,5 +1,11 @@
 import React from 'react';
-import * as styled from './Starts.styled';
+import {
+  Container,
+  Star1,
+  Star2,
+  Star3,
+  ContentContainer
+} from './Starts.styled';
 
 interface Props {
   children: React.ReactNode
@@ -8,14 +14,14 @@ interface Props {
 const Stars: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <styled.Container>
-        <styled.Star1 />
-        <styled.Star2 />
-        <styled.Star3 />
-      </styled.Container>
-      <styled.ContentContainer>
+      <Container>
+        <Star1 />
+        <Star2 />
+        <Star3 />
+      </Container>
+      <ContentContainer>
         {children}
-      </styled.ContentContainer>
+      </ContentContainer>
     </>
   )
 }

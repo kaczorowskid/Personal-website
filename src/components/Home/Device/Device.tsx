@@ -1,5 +1,11 @@
 import React from 'react';
-import * as styled from './Device.styled';
+import {
+  Container,
+  TextContainer,
+  Text,
+  Mask,
+  ImageConatiner
+} from './Device.styled';
 import { site } from '@assets/img';
 import { useScrollValue } from '@hooks';
 
@@ -8,15 +14,15 @@ const Device: React.FC = () => {
   const { scrollValue } = useScrollValue();
 
   return (
-    <styled.Container>
-      <styled.TextContainer pos={scrollValue} >
-        <styled.Text>Check About section ;)</styled.Text>
-      </styled.TextContainer>
-      <styled.Mask />
-      <styled.ImageConatiner>
+    <Container>
+      <TextContainer pos={scrollValue} >
+        <Text>Check About section ;)</Text>
+      </TextContainer>
+      <Mask />
+      <ImageConatiner>
         <img style={{ width: '100%', height: '100%' }} src={site} alt="" />
-      </styled.ImageConatiner>
-    </styled.Container>
+      </ImageConatiner>
+    </Container>
   )
 }
 

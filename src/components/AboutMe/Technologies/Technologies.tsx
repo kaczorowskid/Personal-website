@@ -1,12 +1,18 @@
 import React, { Fragment } from 'react';
-import * as styled from './Technologies.styled';
+import {
+  Container,
+  ContentContainer,
+  Title,
+  ItemsContainer,
+  Item
+} from './Technologies.styled';
 import { technologiesList } from './technologiesList';
 
 const Technologies: React.FC = () => {
 
   return (
-    <styled.Container>
-      <styled.ContentContainer
+    <Container>
+      <ContentContainer
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}
@@ -16,15 +22,15 @@ const Technologies: React.FC = () => {
       >
         {Object.entries(technologiesList).map(([key, value]: [key: string, value: Array<string>], i: number) => (
           <Fragment key={i}>
-            <styled.Title>{key}</styled.Title>
-            <styled.ItemsContainer>
-              {value.map((technology: string, valI: number) => <styled.Item key={valI}>{technology}</styled.Item>
+            <Title>{key}</Title>
+            <ItemsContainer>
+              {value.map((technology: string, valI: number) => <Item key={valI}>{technology}</Item>
               )}
-            </styled.ItemsContainer>
+            </ItemsContainer>
           </Fragment>
         ))}
-      </styled.ContentContainer>
-    </styled.Container>
+      </ContentContainer>
+    </Container>
   )
 }
 

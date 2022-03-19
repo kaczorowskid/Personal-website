@@ -1,5 +1,13 @@
 import React from 'react';
-import * as styled from './StarWars.styled';
+import {
+  Container,
+  CardsContainer,
+  StarWarsCardContainer,
+  StarWarsHeaderConatiner,
+  StarWarsHeader,
+  TitleContainer,
+  MovieTitle
+} from './StarWars.styled';
 import ReactLoading from "react-loading";
 import { urlParser } from '@helper';
 import { useNavigate } from "react-router-dom";
@@ -11,10 +19,10 @@ const StarWars: React.FC = () => {
   const navigate = useNavigate()
 
   return (
-    <styled.Container>
-      <styled.CardsContainer>
+    <Container>
+      <CardsContainer>
         {!loading ? dataAllMovies.map((item: any, i: number) => (
-          <styled.StarWarsCardContainer
+          <StarWarsCardContainer
             onClick={() => navigate(`/movie/${urlParser(item.url)}`)}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -24,17 +32,17 @@ const StarWars: React.FC = () => {
               duration: 1
             }}
             key={i} >
-            <styled.StarWarsHeaderConatiner>
-              <styled.StarWarsHeader>Star</styled.StarWarsHeader>
-              <styled.StarWarsHeader>Wars</styled.StarWarsHeader>
-            </styled.StarWarsHeaderConatiner>
-            <styled.TitleContainer>
-              <styled.MovieTitle>{item.title}</styled.MovieTitle>
-            </styled.TitleContainer>
-          </styled.StarWarsCardContainer>
+            <StarWarsHeaderConatiner>
+              <StarWarsHeader>Star</StarWarsHeader>
+              <StarWarsHeader>Wars</StarWarsHeader>
+            </StarWarsHeaderConatiner>
+            <TitleContainer>
+              <MovieTitle>{item.title}</MovieTitle>
+            </TitleContainer>
+          </StarWarsCardContainer>
         )) : <ReactLoading type='spin' width={100} height={100} color='black' />}
-      </styled.CardsContainer>
-    </styled.Container>
+      </CardsContainer>
+    </Container>
   )
 }
 

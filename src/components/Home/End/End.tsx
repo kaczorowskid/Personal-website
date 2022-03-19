@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { IFacts } from '@types';
-import * as styled from './End.styled';
+import {
+  Container,
+  CardsContainer,
+  Card,
+  CardContentContainer,
+  Text
+} from './End.styled';
 import { starWarsFacts } from './starWarsFacts';
 
 const End: React.FC = () => {
@@ -8,23 +14,23 @@ const End: React.FC = () => {
   const [isTouched, setIsTouched] = useState<number>(0);
 
   return (
-    <styled.Container>
-      <styled.CardsContainer>
+    <Container>
+      <CardsContainer>
         {starWarsFacts.map((fact: IFacts, i: number) => (
-          <styled.Card
+          <Card
             onTouchStart={() => setIsTouched(i + 1)}
             onTouchMove={() => setIsTouched(i + 1)}
             onTouchEnd={() => setIsTouched(0)}
             touch={isTouched}
             key={i}
             title={fact.title}>
-            <styled.CardContentContainer>
-              <styled.Text>{fact.content}</styled.Text>
-            </styled.CardContentContainer>
-          </styled.Card>
+            <CardContentContainer>
+              <Text>{fact.content}</Text>
+            </CardContentContainer>
+          </Card>
         ))}
-      </styled.CardsContainer>
-    </styled.Container>
+      </CardsContainer>
+    </Container>
   )
 }
 

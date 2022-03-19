@@ -1,16 +1,21 @@
 import React from 'react';
-import * as styled from './ScrollDownIcon.styled';
+import {
+  Wrapper,
+  ScrollDown,
+  SVGContainer,
+  ScrollDownPoint
+} from './ScrollDownIcon.styled';
 
 const ScrollDownIcon: React.FC = () => {
   return (
-    <styled.Wrapper>
-      <styled.ScrollDown>
-        <styled.SVGContainer height="30" width="10">
-          <styled.ScrollDownPoint cx="5" cy="15" r="3" />
-          <styled.ScrollDownPoint isSecond={true} cx="5" cy="15" r="3" />
-        </styled.SVGContainer>
-      </styled.ScrollDown>
-    </styled.Wrapper>
+    <Wrapper>
+      <ScrollDown>
+        <SVGContainer height="30" width="10">
+          <ScrollDownPoint cx="5" cy="15" r="3" />
+          <ScrollDownPoint isSecond={true} cx="5" cy="15" r="3" />
+        </SVGContainer>
+      </ScrollDown>
+    </Wrapper>
   )
 }
 

@@ -1,35 +1,44 @@
 import React from 'react';
-import * as styled from './PersonalDescription.styled';
+import {
+  Container,
+  CardContainer,
+  ImageContainer,
+  TextContainer,
+  HeaderContainer,
+  Header,
+  DescriptionContainer,
+  Description
+} from './PersonalDescription.styled';
 import { face } from '@assets/img';
 
 const PersonalDescription: React.FC = () => {
   return (
-    <styled.Container>
-      <styled.CardContainer
+    <Container>
+      <CardContainer
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}
         transition={{
           duration: 1
         }}>
-        <styled.ImageContainer>
+        <ImageContainer>
           <img style={{ width: '100%', height: '100%' }} src={face} alt="" />
-        </styled.ImageContainer>
-        <styled.TextContainer>
-          <styled.HeaderContainer>
-            <styled.Header>
+        </ImageContainer>
+        <TextContainer>
+          <HeaderContainer>
+            <Header>
               Some information about me
-            </styled.Header>
-          </styled.HeaderContainer>
-          <styled.DescriptionContainer>
-            <styled.Description>
+            </Header>
+          </HeaderContainer>
+          <DescriptionContainer>
+            <Description>
               I'm Damian, my hobby is programming web applications. I have been nurturing my passion for several years. On a daily basis I study computer science.
               Besides I am interested in electronics and mechanics.
-            </styled.Description>
-          </styled.DescriptionContainer>
-        </styled.TextContainer>
-      </styled.CardContainer>
-    </styled.Container>
+            </Description>
+          </DescriptionContainer>
+        </TextContainer>
+      </CardContainer>
+    </Container>
   )
 }
 

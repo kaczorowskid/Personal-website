@@ -1,5 +1,11 @@
 import React from 'react';
-import * as styled from './Gallery.styled';
+import {
+  Container,
+  Wrapper,
+  CardContainer,
+  ImageConatiner,
+  Image
+} from './Gallery.styled';
 import { kotel, piesel, pieselwut } from '@assets/img';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
@@ -12,27 +18,27 @@ const Gallery: React.FC = () => {
   }
 
   return (
-    <styled.Container>
-      <styled.Wrapper>
-        <styled.CardContainer>
-          <styled.ImageConatiner>
+    <Container>
+      <Wrapper>
+        <CardContainer>
+          <ImageConatiner>
             <Zoom wrapStyle={zoomStyle}>
-              <styled.Image src={kotel} alt="" width='500' />
+              <Image src={kotel} alt="" width='500' />
             </Zoom>
-          </styled.ImageConatiner>
-          <styled.ImageConatiner>
+          </ImageConatiner>
+          <ImageConatiner>
             <Zoom wrapStyle={zoomStyle}>
-              <styled.Image src={piesel} alt="" width='500' />
+              <Image src={piesel} alt="" width='500' />
             </Zoom>
-          </styled.ImageConatiner>
-          <styled.ImageConatiner>
+          </ImageConatiner>
+          <ImageConatiner>
             <Zoom wrapStyle={zoomStyle}>
-              <styled.Image src={pieselwut} alt="" width='500' />
+              <Image src={pieselwut} alt="" width='500' />
             </Zoom>
-          </styled.ImageConatiner>
-        </styled.CardContainer>
-      </styled.Wrapper>
-    </styled.Container>
+          </ImageConatiner>
+        </CardContainer>
+      </Wrapper>
+    </Container>
   )
 }
 

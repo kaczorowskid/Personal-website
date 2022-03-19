@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
-import * as styled from './Welcome.styled';
+import {
+  Wrapper,
+  Container,
+  ImageContainer,
+  ContentContainer,
+  MyWelcomeContainer,
+  MyWelcome,
+  DescriptionContainer,
+  Description
+} from './Welcome.styled';
 import { pragramist } from '@assets/img';
 import { imageVariant, textVariants } from './animations';
 
@@ -8,18 +17,18 @@ const Welcome: React.FC = () => {
   const [helloIsEnd, setHelloIsEnd] = useState<boolean>(false);
 
   return (
-    <styled.Wrapper>
-      <styled.Container>
-        <styled.ImageContainer
+    <Wrapper>
+      <Container>
+        <ImageContainer
           {...imageVariant}
         >
           <img style={{ width: '100%', height: '100%' }} src={pragramist} alt="programist" />
-        </styled.ImageContainer>
-        <styled.ContentContainer>
-          <styled.MyWelcomeContainer>
+        </ImageContainer>
+        <ContentContainer>
+          <MyWelcomeContainer>
             {[..."Hi I'm Damian"].map((item, i, array) => {
               return (
-                <styled.MyWelcome
+                <MyWelcome
                   key={i}
                   custom={i}
                   initial='hidden'
@@ -30,14 +39,14 @@ const Welcome: React.FC = () => {
                   }}
                 >
                   {item === " " ? <span>&nbsp;</span> : item}
-                </styled.MyWelcome>
+                </MyWelcome>
               )
             })}
-          </styled.MyWelcomeContainer>
-          <styled.DescriptionContainer>
+          </MyWelcomeContainer>
+          <DescriptionContainer>
             {helloIsEnd && [..."Aspirating frontend developer"].map((item, i, array) => {
               return (
-                <styled.Description
+                <Description
                   key={i}
                   custom={i}
                   initial='hidden'
@@ -45,13 +54,13 @@ const Welcome: React.FC = () => {
                   variants={textVariants}
                 >
                   {item === " " ? <span>&nbsp;</span> : item}
-                </styled.Description>
+                </Description>
               )
             })}
-          </styled.DescriptionContainer>
-        </styled.ContentContainer>
-      </styled.Container>
-    </styled.Wrapper>
+          </DescriptionContainer>
+        </ContentContainer>
+      </Container>
+    </Wrapper>
   )
 }
 

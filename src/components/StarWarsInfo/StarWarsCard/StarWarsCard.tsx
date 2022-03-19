@@ -1,5 +1,14 @@
 import React, { Fragment, useEffect } from 'react';
-import * as styled from './StarWarsCard.styled';
+import {
+  Container,
+  ExitIconContainer,
+  ExitIcon,
+  TextContainer,
+  Text,
+  TextContainerBig,
+  TextBig,
+  LoadingContainer
+} from './StarWarsCard.styled';
 import ReactLoading from "react-loading";
 import { config } from '@config';
 import { useParams } from 'react-router-dom';
@@ -22,32 +31,32 @@ const StarWarsCard: React.FC = () => {
   }, [])
 
   return (
-    <styled.Container data={dataOneMovie}>
-      <styled.ExitIconContainer onClick={() => navigate(aboutMe)} >
-        <styled.ExitIcon />
-      </styled.ExitIconContainer>
+    <Container data={dataOneMovie}>
+      <ExitIconContainer onClick={() => navigate(aboutMe)} >
+        <ExitIcon />
+      </ExitIconContainer>
       {!loading ? <Fragment>
-        <styled.TextContainer title='Title' >
-          <styled.Text>{dataOneMovie.title}</styled.Text>
-        </styled.TextContainer>
-        <styled.TextContainer title='Producer'>
-          <styled.Text>{dataOneMovie.producer}</styled.Text>
-        </styled.TextContainer>
-        <styled.TextContainer title='Director'>
-          <styled.Text>{dataOneMovie.director}</styled.Text>
-        </styled.TextContainer>
-        <styled.TextContainer title='Relase data'>
-          <styled.Text>{dataOneMovie.release_date}</styled.Text>
-        </styled.TextContainer>
-        <styled.TextContainerBig>
-          <styled.TextBig>{dataOneMovie.opening_crawl}</styled.TextBig>
-        </styled.TextContainerBig>
+        <TextContainer title='Title' >
+          <Text>{dataOneMovie.title}</Text>
+        </TextContainer>
+        <TextContainer title='Producer'>
+          <Text>{dataOneMovie.producer}</Text>
+        </TextContainer>
+        <TextContainer title='Director'>
+          <Text>{dataOneMovie.director}</Text>
+        </TextContainer>
+        <TextContainer title='Relase data'>
+          <Text>{dataOneMovie.release_date}</Text>
+        </TextContainer>
+        <TextContainerBig>
+          <TextBig>{dataOneMovie.opening_crawl}</TextBig>
+        </TextContainerBig>
       </Fragment> :
-        <styled.LoadingContainer >
+        <LoadingContainer >
           <ReactLoading type='spin' width={100} />
-        </styled.LoadingContainer>}
+        </LoadingContainer>}
 
-    </styled.Container>
+    </Container>
   )
 }
 
