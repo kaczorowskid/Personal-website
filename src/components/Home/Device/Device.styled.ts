@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import { stopka } from '@assets/img';
 import { device } from '@helper';
-import { colorConfig } from '@styles';
 
 export const Container = styled.div`
   top: 0;
   width: 100%;
   height: 240vh;
   position: relative;
-  background: ${colorConfig.white};
+  background: ${({ theme }) => theme.white};
   z-index: 0;
 `;
 
@@ -20,8 +19,8 @@ export const ImageConatiner = styled.div`
   transform: translate(-50%, -50%);
   height: 180vh;
   z-index: -1;
-  border-left: 5px solid ${colorConfig.black};
-  border-right: 5px solid ${colorConfig.black};
+  border-left: 5px solid ${({ theme }) => theme.black};
+  border-right: 5px solid ${({ theme }) => theme.black};
 
   @media only screen and (${device.laptop}) {
     width: 90%;
@@ -45,7 +44,7 @@ export const Mask = styled.div`
     top: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    background: ${colorConfig.white};
+    background: ${({ theme }) => theme.white};
     border-bottom: 5px solid black;
     
     @media only screen and (${device.laptop}) {
@@ -60,7 +59,7 @@ export const Mask = styled.div`
     position: absolute;
     bottom: -10px;
     left: 0;
-    background: ${colorConfig.white};
+    background: ${({ theme }) => theme.white};
     background-image: url(${stopka});
     background-repeat: no-repeat;
     background-size: 40.5% 40%;
@@ -90,5 +89,5 @@ export const TextContainer = styled.div<{ pos?: number }>`
 export const Text = styled.span`
   font-family: 'Press Start 2P';
   font-size: 30px;
-  color: ${colorConfig.black};
+  color: ${({ theme }) => theme.black};
 `;

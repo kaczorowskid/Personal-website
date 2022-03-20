@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { stars } from '@assets/img';
 import { device } from '@helper';
-import { colorConfig } from '@styles';
 
 export const Container = styled.div`
   margin-top: 40px;
@@ -16,12 +15,12 @@ export const Container = styled.div`
 export const CardsContainer = styled.div`
   padding: 5px;
   width: 1000px;
-  border: 5px solid ${colorConfig.black};
+  border: 5px solid ${({ theme }) => theme.black};
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  background: ${colorConfig.white};
+  background: ${({ theme }) => theme.white};
   border-radius: 20px;
   margin-bottom: 50px;
 
@@ -43,7 +42,7 @@ export const CardsContainer = styled.div`
     content: "";
     width: 100%;
     height: 100%;
-    background: ${colorConfig.lighterBlack};
+    background: ${({ theme }) => theme.lighterBlack};
     top: 30px;
     left: 30px;
     position: absolute;
@@ -66,7 +65,7 @@ export const StarWarsCardContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 4px solid ${colorConfig.white};
+  border: 4px solid ${({ theme }) => theme.white};
   cursor: pointer;
   border-radius: 10px;
 
@@ -75,7 +74,7 @@ export const StarWarsCardContainer = styled(motion.div)`
   }
 
   &:hover {
-    border: 4px solid ${colorConfig.yellow};
+    border: 4px solid ${({ theme }) => theme.yellow};
   }
 `;
 
@@ -92,7 +91,7 @@ export const StarWarsHeaderConatiner = styled.div`
 
 export const StarWarsHeader = styled.span`
   font-family: 'Press Start 2P';
-  color: ${colorConfig.lightYellow};
+  color: ${({ theme }) => theme.lightYellow};
 `;
 
 export const TitleContainer = styled.div`
@@ -105,7 +104,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const MovieTitle = styled.div`
-  color: ${colorConfig.white};
+  color: ${({ theme }) => theme.white};
   font-size: 15px;
   font-family: 'Press Start 2P';
 `;

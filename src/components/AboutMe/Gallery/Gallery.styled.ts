@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { device } from '@helper';
-import { colorConfig } from '@styles';
 
 export const Container = styled.div`
   width: 100%;
@@ -13,7 +12,7 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   width: 100%;
   height: 70%;
-  background: ${colorConfig.pink};
+  background: ${({ theme }) => theme.pink};
   display: flex;
   justify-content: center;
   align-items: center;

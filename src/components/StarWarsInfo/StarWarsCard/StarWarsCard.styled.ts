@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { Cross } from '@styled-icons/entypo';
 import { device } from '@helper';
-import { colorConfig } from '@styles';
 
 export const Container = styled.div<{ data?: any }>`
   width: 1000px;
   height: 700px;
-  border: 5px solid ${colorConfig.white};
+  border: 5px solid ${({ theme }) => theme.white};
   border-radius: 10px;
   -webkit-box-shadow: 8px 10px 8px 0px rgba(255, 255, 255, 0.5);
   -moz-box-shadow: 8px 10px 8px 0px rgba(255, 255, 255, 0.5);
@@ -31,7 +30,7 @@ export const Container = styled.div<{ data?: any }>`
 export const TextContainer = styled.div<{ title: string }>`
   width: 90%;
   height: 10%;
-  border-bottom: 3px dotted ${colorConfig.yellow};
+  border-bottom: 3px dotted ${({ theme }) => theme.yellow};
   font-family: 'Press Start 2P';
   display: flex;
   justify-content: flex-end;
@@ -45,7 +44,7 @@ export const TextContainer = styled.div<{ title: string }>`
   &::before {
     content: "${({ title }) => title}";
     position: absolute;
-    color: ${colorConfig.yellow};
+    color: ${({ theme }) => theme.yellow};
     bottom: 0px;
     left: 0;
 
@@ -61,7 +60,7 @@ export const TextContainer = styled.div<{ title: string }>`
 
 export const Text = styled.span`
   font-family: 'Press Start 2P';
-  color: ${colorConfig.yellow};
+  color: ${({ theme }) => theme.yellow};
   font-size: 0.9rem;
   display: flex;
   justify-content: flex-end;
@@ -91,7 +90,7 @@ export const TextContainerBig = styled.div`
 
 export const TextBig = styled.span`
   font-family: 'Press Start 2P';
-  color: ${colorConfig.yellow};
+  color: ${({ theme }) => theme.yellow};
   font-size: 0.9rem;
   height: 100%;
 `;
@@ -105,7 +104,7 @@ export const ExitIconContainer = styled.div`
 `;
 
 export const ExitIcon = styled(Cross)`
-  color: ${colorConfig.red};
+  color: ${({ theme }) => theme.red};
   position: absolute;
   width: 100%;
   height: 100%;

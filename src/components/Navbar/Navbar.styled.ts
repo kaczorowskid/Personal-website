@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { colorConfig } from '@styles';
 
 export const Container = styled.div`
   position: fixed;
   width: 100vw;
   height: 100px;
   font-family: 'Roboto', sans-serif;
-  background: ${colorConfig.lightBlack};
+  background: ${({ theme }) => theme.lightBlack};
   z-index: 2;
   display: flex;
   justify-content: space-between;
@@ -20,7 +19,7 @@ export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   font-size: 20px;
-  color: ${colorConfig.yellow};
+  color: ${({ theme }) => theme.yellow};
   font-family: 'Press Start 2P';
   cursor: pointer;
 `;
@@ -43,7 +42,7 @@ export const RouterButton = styled.div<{ btnColor: string }>`
   border-bottom: 4px solid transparent ;
 
   &:hover {
-      border-bottom: 4px solid ${colorConfig.white};
+      border-bottom: 4px solid ${({ theme }) => theme.white};
   }
 `;
 
@@ -57,7 +56,7 @@ export const HamburgerLine = styled(motion.div)`
   top: 20%;
   width: 100%;
   height: 5px;
-  background: ${colorConfig.yellow};
+  background: ${({ theme }) => theme.yellow};
   margin: 5px 0;
 `;
 
@@ -67,7 +66,7 @@ export const HamburgerMenuContainer = styled(motion.div)`
   left: 0;
   height: calc(100vh - 100px);
   width: 100vw;
-  background: ${colorConfig.black};
+  background: ${({ theme }) => theme.black};
   z-index: 10;
   opacity: 0.9;
   display: flex;

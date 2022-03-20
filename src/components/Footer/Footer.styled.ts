@@ -1,16 +1,15 @@
 import styled from "styled-components";
-import { colorConfig } from '@styles';
 
 export const Container = styled.div`
   position: relative;
   width: 100%;
   height: 100px;
-  background: ${colorConfig.lightBlack};
+  background: ${({ theme }) => theme.lightBlack};
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
 export const Text = styled.span`
-  color: ${colorConfig.yellow};
+  color: ${({ theme }) => theme.yellow};
 `;
