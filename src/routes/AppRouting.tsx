@@ -15,7 +15,6 @@ const AppRouting: React.FC<Props> = ({ routes }) => {
         {routes.map((route: IRouting, i: number) => (
           <Route key={i} path={route.path} element={route.element} />
         ))}
-        <Route path='*' element={<div>404</div>} />
       </Routes>
     </Router>
   )

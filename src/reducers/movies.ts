@@ -48,6 +48,3 @@ export const moviesReducer = createSlice({
     });
   }
 })
-
-// export moviesReducer.reducer;
-
